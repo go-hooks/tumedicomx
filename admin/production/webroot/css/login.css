@@ -1,0 +1,93 @@
+H1 SPAN
+{
+	font-weight: bold;
+	font-size: 32.2pt;
+}
+@media screen and (max-width: 1024px)
+{
+	H1 SPAN
+	{
+		font-size: 24.6pt;
+	}
+}
+H1 SPAN
+{
+	line-height: 0.8;
+	/*+placement:shift -3px 0px;*/
+	position: relative;
+	left: -3px;
+	top: 0px;
+	color: #5A5A5A;
+}
+DIV.padding-top
+{
+	margin-top: 120px;
+	background-color: #FFFFFF;
+	/*+border-radius:7px;*/
+	-moz-border-radius: 7px;
+	-webkit-border-radius: 7px;
+	-khtml-border-radius: 7px;
+	border-radius: 7px;
+	/*+box-shadow:0px 3px 10px #AAAAAA;*/
+	-moz-box-shadow: 0px 3px 10px #AAAAAA;
+	-webkit-box-shadow: 0px 3px 10px #AAAAAA;
+	-o-box-shadow: 0px 3px 10px #AAAAAA;
+	box-shadow: 0px 3px 10px #AAAAAA;
+}
+LABEL
+{
+	color: #929292;
+}
+DIV.padding-top DIV.box
+{
+	padding: 10px;
+}
+IMG
+{
+	/*[empty]margin-top:;*/
+	/*+placement:shift 0px 19px;*/
+	position: relative;
+	left: 0px;
+	top: 19px;
+}
+DIV.alert
+{
+	margin-top: 26px;
+	text-align: center;
+}
+DIV.center-block P.text-muted
+{
+	text-align: right;
+	font-size: 8pt;
+}
+DIV.padding-top DIV.col-sm-5 P.text-info
+{
+	text-align: right;
+}
+BODY
+{
+	/*[disabled]background-color:#C5C5C5;*/
+	padding-bottom: 0px;
+	background-image: url(../img/noise.png);
+}
+H1
+{
+	font-size: 18.1pt;
+}
+@media screen and (max-width: 1024px)
+{
+	H1
+	{
+		font-size: 13.3pt;
+	}
+}
+H1
+{
+	/*+placement:shift -19px -5px;*/
+	position: relative;
+	left: -19px;
+	top: -5px;
+	color: #0D4B8E;
+	padding-left: 13px;
+	border-left: 1px solid #DAD9D9;
+}

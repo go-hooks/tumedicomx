@@ -1,0 +1,10 @@
+# Evitar que afalta de un archivo indice, se liste el contenido de una
+# carpeta
+Options -Indexes
+
+# Definir que archivos actuan como indices
+# DirectoryIndex index.php index.html index.htm /prohibido.php
+
+#ErrorDocument 403 "Acceso denegado
+#ErrorDocument 404 /404.php
+#ErrorDocument 500 /500.php

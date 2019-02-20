@@ -1,0 +1,15 @@
+/** ---------------------------------------------------- *
+  * Upale Operativo                                      *
+  * upale.com                                            *
+  * ---------------------------------------------------- *
+  * Archivo:      styles.css                             *
+  * Descripcion:	Carga los estilos                      *
+  * Autor: 			  Jesus Nazareth Gutierrez Hernandez     *
+  * E-mail:			  jesusnaza@hotmail.com                  *
+  * ---------------------------------------------------- *
+  */
+ @import 'layout.css';
+ @import 'usuarios.css';
+ @import 'loginForm.css';
+ @import 'tabpanel.css';
+ @import 'agenda.css';

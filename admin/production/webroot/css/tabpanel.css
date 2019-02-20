@@ -1,0 +1,58 @@
+.TabPanel {
+	margin: 0px;
+	padding: 0px;
+	float: left;
+	clear: none;
+	width: 100%;
+}
+
+.TabPanelTabGroup {
+	margin: 0px;
+	padding: 0px;
+}
+
+.TabPanelTab {
+	position: relative;
+	top: 1px;
+	float: left;
+	padding: 4px 10px;
+	margin: 0px 1px 0px 0px;
+	font: bold 0.9em sans-serif;
+	background-color: #EFEFEF;
+	list-style: none;
+	border-left: solid 1px #CCC;
+	border-bottom: solid 1px #ccc;
+	border-top: solid 1px #ccc;
+	border-right: solid 1px #ccc;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	cursor: pointer;
+}
+
+.TabPanelTabHover {
+	background-color: #CCC;
+}
+
+.TabPanelTabSelected {
+	background-color: #F9F9F9;
+	border-bottom: 1px solid #F9F9F9;
+}
+
+.TabPanelTab a {
+	color: black;
+	text-decoration: none;
+}
+
+.TabPanelContentGroup {
+	clear: both;
+	border-left: solid 1px #CCCCCC;
+	border-bottom: solid 1px #CCCCCC;
+	border-top: solid 1px #CCCCCC;
+	border-right: solid 1px #CCCCCC;
+	background-color: #F9F9F9;
+}
+
+.TabPanelContent {
+	padding: 4px;
+}
+

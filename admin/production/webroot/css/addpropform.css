@@ -1,0 +1,45 @@
+@charset "utf-8";
+/* CSS Document */
+
+#main #addpropform {
+	width:500px;
+	border:1px solid #CBD1D9;
+	padding: 25px;
+}
+
+#main #addpropform .tabform {
+	width: 500px;
+}
+
+#main #addpropform .headrow {
+	width: 170px;
+	background: #F2F2F2;
+	padding-left:5px;
+}
+
+#main #addpropform .headrow label {
+	cursor:pointer;
+}
+
+#main #addpropform .normalrow {
+	width: 300px;
+	float:left;
+}
+
+#main #addpropform input, #main #addpropform select {
+	width: 100%;
+	border:1px solid #CBD1D9;
+	background:#FFFFFF;
+}
+
+#main #addpropform #submit {
+	background-color:#ECF1F4;
+	padding-bottom:1px;	
+	border:1px solid #CBD1D9;
+	color:#000000;
+	width: 100px;
+	float:right;
+	clear:right;
+	vertical-align:middle;
+}
+

@@ -1,0 +1,93 @@
+/* Vista por dia
+   * ----------------------------- */
+  table.agendaVDia                        { border-spacing:1px; font-family:Verdana, Arial, Helvetica, sans-serif; font-size:10px; background-color:#E7E7E7; color: #b7b7b7; }
+  table.agendaVDia img                    { border:none; }
+  table.agendaVDia td,
+  table.agendaVDia th                     { color:#666666; padding: 10px 4px; }
+  
+  table.agendaVDia tbody th               { background:#EAEFF4; height:20px; border: 1px solid #FFF; }
+  table.agendaVDia tbody tr               { background-color:#FFF; text-align:left; }
+  table.agendaVDia tbody tr.odd           { background: #f9f9f9; border-top:1px solid #FFF; }
+  table.agendaVDia tbody th a:link, 
+  table.agendaVDia tbody th a:visited     { color: #1975D7; text-decoration: none; font-weight:normal; }
+  table.agendaVDia tbody th a:hover       { color: #50ADEA; border-bottom:2px solid #8FD5FF; text-decoration: none ; }
+  
+  table.agendaVDia tbody tr td            { height:20px; background: #FFF; border: 1px solid #FFF; }
+  table.agendaVDia tbody tr.odd td        { background: #FDFDFD; border-top:1px solid #FFF; }
+  table.agendaVDia tbody td a:link,
+  table.agendaVDia tbody td a:visited     { color: #1975D7; text-decoration: none; }
+  table.agendaVDia tbody td a:hover       { color: #50ADEA; border-bottom:2px solid #8FD5FF; text-decoration: none ; }
+  table.agendaVDia tbody tr:hover td      { background: #EAEFF4 !important; color:#666666; }
+  table.agendaVDia tbody tr td.current-hour  { background-color:#FCFEEB; }
+  
+  /* Vista por semana
+   * ----------------------------- */
+  table.agendaVSemana                        { border-spacing:1px; font-family:Verdana, Arial, Helvetica, sans-serif; font-size:10px; background-color:#E7E7E7; color: #b7b7b7; }
+  table.agendaVSemana img                    { border:none; }
+  table.agendaVSemana td, 
+  table.agendaVSemana th                     { color:#666666; padding: 10px 4px; }
+  
+  table.agendaVSemana tbody th               { background:#EAEFF4; height:20px; border: 1px solid #FFF; }
+  table.agendaVSemana tbody tr               { background-color:#FFF; text-align:left; }
+  table.agendaVSemana tbody tr.odd           { background: #f9f9f9; border-top:1px solid #FFF; }
+  table.agendaVSemana tbody th a:link, 
+  table.agendaVSemana tbody th a:visited     { color:#1975D7; text-decoration: none; font-weight:normal; }
+  table.agendaVSemana tbody th a:hover       { color: #50ADEA; border-bottom:2px solid #8FD5FF; text-decoration: none ; }
+  
+  table.agendaVSemana tbody tr td            { height:20px; background: #FFF; border: 1px solid #FFF; cursor:pointer; }
+  table.agendaVSemana tbody tr.odd td        { background: #FDFDFD; border-top:1px solid #FFF; }
+  table.agendaVSemana tbody td a:link,
+  table.agendaVSemana tbody td a:visited     { color: #1975D7; text-decoration: none; }
+  table.agendaVSemana tbody td a:hover       { color: #50ADEA; border-bottom:2px solid #8FD5FF; text-decoration: none ; }
+  table.agendaVSemana tbody tr:hover td      { background: #EAEFF4 !important; color:#666666; }
+  table.agendaVSemana tbody tr td.current-day{ background-color:#FCFEEB; }
+  
+  /* Vista por dia
+   * ----------------------------- */
+  table.agendaVMes                        { border-spacing:1px; font-family:Verdana, Arial, Helvetica, sans-serif; font-size:10px; background-color:#E7E7E7; color: #b7b7b7; }
+  table.agendaVMes img                    { border:none; }
+  table.agendaVMes td, 
+  table.agendaVMes th                     { color:#666666; padding: 4px; }
+  
+  table.agendaVMes tbody th               { background:#EAEFF4; height:20px; border: 1px solid #FFF; padding: 4px; }
+  table.agendaVMes tbody tr               { background-color:#FFF; text-align:left; }
+  table.agendaVMes tbody tr.odd           { background: #f9f9f9; border-top:1px solid #FFF; }
+  table.agendaVMes tbody th a:link, 
+  table.agendaVMes tbody th a:visited     { color:#1975D7; text-decoration: none; }
+  table.agendaVMes tbody th a:hover       { color: #50ADEA; border-bottom:2px solid #8FD5FF; text-decoration: none ; }
+  
+  table.agendaVMes tbody tr td            { height:100px; background: #FFF; border: 1px solid #FFF; }
+  table.agendaVMes tbody tr.odd td        { background: #fff; border-top:1px solid #FFF; }
+  table.agendaVMes tbody td a             { float:right; }
+  table.agendaVMes tbody td a:link,
+  table.agendaVMes tbody td a:visited     { color: #1975D7; text-decoration: none; }
+  table.agendaVMes tbody td a:hover       { color: #50ADEA; border-bottom:2px solid #8FD5FF; text-decoration: none ; }
+  
+  table.agendaVMes tbody tr td.semana     { background: #EAEFF4; }
+  table.agendaVMes tbody tr td.semana a   { float:none; }
+  
+  table.agendaVMes tbody tr td.finSemana  { background: #FDFDFD; }
+  table.agendaVMes tbody tr td.out-day    { background: #FDFDFD !important; }
+  table.agendaVMes tbody tr td.current-day{ background-color:#FCFEEB; }
+
+  table.agendaVMes tbody td:hover     { background: #EAEFF4 !important; color:#666666; }
+  
+   
+  span.entrada { text-align: left; color: #666; font-weight:bold; }
+  span.cancelada { color: #CC0000; text-decoration:line-through; }
+  span.expirada { color: #CC6600; }
+  span.grupal { color: #666666; font-weight:bold; display:block; }
+  span.grupal i { color: #CC6600; }
+  
+  .agendaTabPanel             { margin: 0px; padding: 0px; float: left; clear: none; width: 100%; }
+  .agendaTabPanelTabGroup     { margin: 0px; padding: 0px; }
+  .agendaTabPanelTab          { position: relative; top: 1px; float: left; padding: 5px 15px; margin: 0px 1px 0px 0px; font: bold 0.7em sans-serif; background-color: #EFEFEF; list-style: none; border-left: solid 1px #CCC; border-bottom: solid 1px #ccc; border-top: solid 1px #ccc; border-right: solid 1px #CCC; -moz-user-select: none; -khtml-user-select: none; cursor: pointer; }
+  .agendaTabPanelTabHover     { background-color: #CCC; }
+  .agendaTabPanelTabSelected  { background-color: #F9F9F9; border-bottom: 1px solid #F9F9F9; }
+  .agendaTabPanelTab a        { color: black; text-decoration: none; }
+  .agendaTabPanelContentGroup { clear: both; border-left: solid 1px #CCC; border-bottom: solid 1px #CCC; border-top: solid 1px #ccc; border-right: solid 1px #ccc; background-color: #F9F9F9; }
+  .agendaTabPanelContent      { padding: 4px; }
+  
+  .agendaNav { padding:10px 10px; }
+  
+  .agendaNav h2 { color:#696A6B; }

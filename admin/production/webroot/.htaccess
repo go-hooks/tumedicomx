@@ -1,0 +1,12 @@
+<ifModule mod_rewrite.c>
+    RewriteEngine on
+
+    #RewriteBase /upale_operativo/website/sistema
+
+    #RewriteRule !\.(js|ico|gif|jpg|png|css)$ index.php
+
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    
+    RewriteRule ^(.*)$ index.php?request=$1 [L,QSA]
+</ifModule>

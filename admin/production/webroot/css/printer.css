@@ -1,0 +1,9 @@
+div#wrapper { width:100%; background:none; }
+#left { display:none; }
+#main { margin:0px; top:0px; }
+div#bton_print { display:none; }
+div#header { display:none; }
+div.search-panel { display:none; }
+
+ul.agendaTabPanelTabGroup { display:none; }
+

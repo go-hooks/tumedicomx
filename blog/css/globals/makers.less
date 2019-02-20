@@ -1,0 +1,93 @@
+/*
+|--------------------------------------------------------------------------
+| MAKERS -  mixins
+|--------------------------------------------------------------------------
+*/
+
+
+///////////// CUSTOM LIST
+
+.make-list ( @icon: '•', @color: red, @font-size: 20px, @top: 0, @left: -15px ) {
+
+	list-style: none;
+	
+	& > li {
+		position: relative;
+
+		&:before {
+			position: absolute;
+			left: @left;
+			top: @top;
+			content: @icon;
+			color: @color;
+			font-size: @font-size;
+		}
+	}
+}
+
+
+///////////// SHAPES
+
+.make-arrow-icon ( @top: auto, @right: auto, @bottom: auto, @left: auto ) {
+	position: absolute;
+	content: '';
+	top: @top;
+	left: @left;
+	right: @right;
+	bottom: @bottom;
+}
+
+.make-arrow-up ( @color: red, @base-size: 120px, @left-size: 60px, @right-size: 60px) {
+	width: 0;
+	height: 0; 
+	border-bottom: @base-size solid @color; 
+	border-left: @left-size solid transparent; 
+	border-right: @right-size solid transparent; 
+}
+
+.make-arrow-down ( @color: red, @base-size: 120px, @left-size: 60px, @right-size: 60px) {
+	width: 0; 
+	height: 0;
+	border-top: @base-size solid @color;
+	border-left: @left-size solid transparent; 
+	border-right: @right-size solid transparent; 
+}
+
+.make-arrow-left ( @color: red, @base-size: 120px, @top-size: 60px, @bottom-size: 60px) {
+	width: 0;
+	height: 0;
+	border-right: @base-size solid @color;
+	border-top: @top-size solid transparent;
+	border-bottom: @bottom-size solid transparent;
+}
+
+.make-arrow-right ( @color: red, @base-size: 120px, @top-size: 60px, @bottom-size: 60px) {
+	width: 0;
+	height: 0;
+	border-left: @base-size solid @color;
+	border-top: @top-size solid transparent;
+	border-bottom: @bottom-size solid transparent; 
+}
+
+
+
+//////////// BUTTONS
+
+.make-btn ( @font-color: #333333, @gradient-1: #fff, @gradient-2: #e6e6e6, @color-border: #cccccc, @text-shadow: 1px 1px 0 white ) {
+  .inline-block;
+  padding: 4px 12px;
+  font-size: 14px;
+  line-height: 20px;
+  .cursor-pointer;
+  vertical-align: middle;
+  .text-center;
+  .vertical-gradient (@gradient-1, @gradient-2);
+  border: 1px solid @color-border;
+  .no-decoration;
+  color: @font-color;
+  text-shadow: @text-shadow;
+
+  &:hover {
+    .vertical-gradient (@gradient-2, @gradient-1);
+  }
+}

@@ -1,0 +1,83 @@
+
+/** 
+ * lginForm.css
+ * Styles CSS for login form 
+ * ------------------------------------- 
+ * Jesus Nazareth Gutierrez Hernandez
+ * jesusnaza@hotmail.com
+ */
+
+	
+	#login {
+		background:#FFFFFF none repeat scroll 0 0;
+		border:0px solid #F0F1F1;
+		padding:1.5em;
+                font-family:Verdana, Arial, Helvetica, sans-serif;  
+                font-size: 12px;
+        }
+
+
+	#login label{
+		display:block;
+		
+		background-color:#FEFEFE;
+		padding:10px 10px 0;
+		cursor:pointer;
+	}
+	#login input {
+		border:1px solid #CBD1D9;
+		background:#FFFFFF;
+		color:#657077;
+	}
+	
+	#login #log, #login #pwd {
+		font-size:1.7em;
+		width:80%;
+	}
+	
+	#login ul {
+		list-style-image:none;
+		list-style-position:outside;
+		list-style-type:none;
+		margin:5px;
+		padding:5px;
+		display:block;
+	}
+	
+	#login input:focus,#login input:hover {
+		border:1px solid #CBD1D9;
+		background: #F0F1F1;
+	}
+	.error{
+		display:block;
+		padding: 5px;
+		font-weight:bold;
+		border: 3px solid #B90000;
+		color:#B90000;
+		background: #FDFDFD;
+	}
+	
+	#login #submit {
+		background-color:#ECF1F4;
+		border:1px solid #CBD1D9;
+		color:#000000;
+		vertical-align:middle;
+		float:right;
+	}
+	
+	#login #submit:hover {
+		border:1px solid #CBD1D9;
+		background: #F0F1F1;	
+	}
+	
+	#login a{
+		display:block;
+		height:1.5em;
+		color:#22223e;
+		background-color:#FEFEFE;
+		padding:10px 10px 0;
+		text-decoration:underline;
+	}
+	#login a:hover{
+		text-decoration:underline;
+	}

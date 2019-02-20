@@ -1,0 +1,428 @@
+	body  {
+    	font: 100% Verdana, Arial, Helvetica, sans-serif;
+    	background:url(../images/fondo_cuerpo.gif) repeat;
+    	margin: 0;
+		padding: 0;
+    	text-align: center;
+		color: #657077;
+		font-size: .8em;
+    }
+	.admin img {
+		border:none;
+    }
+	.admin #container { 
+    	width: 100%;
+    	margin: 0; 
+    	text-align: left;
+    }
+	.admin #header {
+		position:absolute;
+		right:25px;
+		top:10px;
+    	padding: 0 10px;
+		display:block;
+		border-bottom: 1px solid #657077;
+    }
+	
+	.admin #header a {
+		text-decoration:none;
+		text-transform:uppercase;
+		font-weight:bold;
+		color:#333333;
+	}
+	.admin #sidebar {
+		position: fixed; height:100%;
+    	width: 150px;
+    	background: #C1CED7;
+    	padding:2px;
+		top:0px;
+		bottom:0px;
+		left:0px;
+    }
+    .admin #sidebar p {
+    	margin-left:5px; /* deben asignarse los márgenes izquierdo y derecho de cada elemento que vaya a colocarse en las columnas laterales */
+    	margin-right: 5px;
+    }
+	.admin #sidebar h4 {  
+	    font-family:Arial, Helvetica, sans-serif;  
+		font-size:20px;  
+		color:#ffffff;  
+		letter-spacing:-1px;  
+		margin-bottom:10px;  
+	}  
+	.admin #sidebar h4 small {  
+		color:#E3E9EC;  
+		font-weight:normal;  
+		font-size:9px;  
+		font-family:Verdana, Arial, Helvetica, sans-serif;  
+		text-transform:uppercase;  
+		position:relative;  
+		top:-4px;  
+		left:6px;
+		letter-spacing:0px;  
+	}
+	.admin #sidebar #menuContent {
+		font-size:10px;
+		color:#FFFFFF;
+		background-color:#738AA2;  
+		border:2px solid #FFFFFF;
+	}
+	
+	.admin #sidebar #menuContent p {
+		margin-top:4px;
+		margin-bottom:4px;
+		display:block;
+		font-size:9px;   
+		text-transform:uppercase;  
+	}
+	.admin #sidebar .content {  
+		background-color:#ffffff;  
+		padding:1px;  
+		border:1px solid #464c54;     
+	}
+	
+	.admin #sidebar #menuContent ul {  
+		margin:0px;  
+		padding:0px 2px 0px 2px;  
+	}  
+	.admin #sidebar #menuContent li {  
+		list-style:none;  
+		border-bottom:1px solid #d6dde0;  
+		padding-top:3px;  
+		padding-bottom:3px;  
+		font-size:9px;  
+	}  
+	.admin #sidebar #menuContent ul li a {  
+		text-decoration:none;  
+		color:#3e4346;  
+	}
+	.admin #sidebar #menuContent ul li a:hover {
+		display:block;
+		background:#E3E9EC;
+	} 
+	.admin #sidebar #menuContent ul li a small {  
+		color:#8b959c;  
+		font-size:9px;  
+		text-transform:uppercase;  
+		font-family:Verdana, Arial, Helvetica, sans-serif;  
+		position:relative;  
+		left:4px;  
+		top:0px;  
+	}
+	.admin #sidebar #menuContent ul li:last-child {  
+		border-bottom:none;  
+	}
+	
+	.admin #mainContent {
+    	margin: 60px 0px 100px 180px; /* el margen derecho puede asignarse en ems o píxeles. Éste crea el espacio a lo largo de la parte derecha de la página. */
+    }
+	
+	/* Tablas */
+	#content table{
+		border: 1px solid #A3B7C6;
+		font-size:9px;
+	}
+	
+	/* Head de las tablas */
+	#content thead tr td{
+		border: 1px solid #A3B7C6;
+		background: #C1CED7;
+		color:#3C4E5A;
+		padding: 3px 10px 3px 10px;
+	}
+	#content thead tr td a{
+		color:#333333;
+		text-decoration:none;
+	}
+	#content thead tr td a:hover{
+		color:#333333;
+		text-decoration:underline;
+	}
+	
+	/* Body de las tablas */
+	#content tbody tr td{
+		border: 1px solid #A3B7C6;
+		color: #657077; display:table-cell;
+		
+		padding: 3px 10px 3px 10px;
+	}
+	#content tbody tr td a{
+		color:#333333;
+		text-decoration:none;
+	}
+	#content tbody tr td a:hover{
+		color:#333333;
+		text-decoration:underline;
+	}
+	#content tbody tr {
+		border: 1px solid #A3B7C6;
+	}
+	
+	/* --------------------------------------------------------------------------------------- */
+	/* Tablas de formularios */
+	#forms{
+       -moz-border-radius-bottomleft:5px;
+       -moz-border-radius-bottomright:5px;
+       -moz-border-radius-topleft:5px;
+       -moz-border-radius-topright:5px;
+		border: 1px solid #A3B7C6;
+		background:#FBFBFB;
+		padding:10px;
+		width: 500px;
+	}
+	
+	#forms table.tabform input, .admin #mainContent #forms select {
+		width: 100%;
+		border:1px solid #CBD1D9;
+		background:#FFFFFF;
+	}
+	
+	#forms .error {
+		border:1px solid #FF0000 !important;
+		background:#FFD9D5 !important;
+	}
+	
+	#forms table.tabform label {
+		cursor:pointer;
+	}
+	#forms table.tabform #submit {
+		background-color:#ECF1F4;
+		padding-bottom:1px;	
+		border:1px solid #CBD1D9;
+		color:#000000;
+		width: 100px;
+		float:right;
+		clear:right;
+		vertical-align:middle;
+	}
+	
+	#forms table.tabform .info {
+		font-size:12px;
+		padding-left:0px;
+	}
+	
+	#forms table.tabform {
+		border: none;
+		width:100%;
+	}
+	#forms table.tabform > td{
+		border: none;
+		padding: 3px 10px 3px 10px;
+	}
+	
+	/* Head de las tablas */
+	#forms table.tabform .headrow {
+		border:none;
+		width: 170px;
+		background: #F2F2F2;
+		padding-left:5px;
+	}
+	#forms table.tabform .headrow a{
+		color:#333333;
+		text-decoration:none;
+	}
+	#forms table.tabform .headrow a:hover{
+		color:#333333;
+		text-decoration:underline;
+	}
+	
+	/* Body de las tablas */
+	#forms table.tabform .normalrow {
+		border:none;
+		width: 300px;
+		float:left;
+	}
+	#forms table.tabform .normalrow a{
+		color:#333333;
+		text-decoration:none;
+	}
+	#forms table.tabform .normalrow a:hover{
+		color:#333333;
+		text-decoration:underline;
+	}
+	/** ----- Form de detalle ----- **/
+	#detail {
+		border: 1px solid #A3B7C6;
+		background:#FFFFFF;
+		padding:5px;
+	}
+	#detailform { 
+		border: 1px solid #A3B7C6;
+		background:#FBFBFB;
+		padding:20px;
+		width: 600px;
+	}
+	
+	#detailform a {
+		text-decoration:none;
+		float:right;
+		color:#333333;
+	}
+	#detailform a:hover {
+		text-decoration:underline;
+	}  
+	
+	/** ------ Form de articulos ------- **/
+	#articlesForm {
+		border: 1px solid #A3B7C6;
+		background:#FBFBFB;
+		padding:20px;
+		width: 500px;
+	}
+	#articlesForm input, #articlesForm select, #articlesForm textarea {
+		width: 100%;
+		border:1px solid #CBD1D9;
+		background:#FFFFFF;
+	}
+	
+	#articlesForm .error {
+		border:1px solid #FF0000;
+		background:#FFD9D5;
+	}
+	#articlesForm #titart {
+		font-size:1.7em;
+	}
+	#articlesForm label {
+		display:block;
+		cursor:pointer;
+		margin-top:10px;
+		margin-bottom:5px;
+	}
+	#articlesForm #submit {
+		background-color:#ECF1F4;
+		padding-bottom:1px;	
+		border:1px solid #CBD1D9;
+		color:#000000;
+		width: 100px;
+		float:right;
+		clear:right;
+		vertical-align:middle;
+	}
+	/* ------------------------- */
+	
+	
+	
+	#imgform {
+		position:absolute;
+		width:400px;
+		height:auto;
+		top:60px;
+		margin-left:730px;
+		border: 1px solid #A3B7C6;
+		background:#FBFBFB;
+		padding:10px;
+	}
+	#imgform iframe {
+		width:400px;
+		height:400px;
+		border: 1px solid #A3B7C6;
+		background:#FFFFFF;
+	}
+	#imgform label, #imgform  p{
+		display:block;	
+		background-color:#FEFEFE;
+		padding:0px 0px 0px 0px;
+	}
+	
+	#imgform input {
+		border:1px solid #CBD1D9;
+		float:left;
+		clear:left;
+		width: 200px;
+		margin-bottom:20px;
+		background:#FFFFFF;
+	}
+	
+	#imgform #submit {
+		background-color:#ECF1F4;
+		padding-bottom:1px;	
+		border:1px solid #CBD1D9;
+		color:#000000;
+		width: 150px;
+		vertical-align:middle;
+	}
+	
+	#imgform #submit:hover {
+		background-image:none;
+		border:1px solid #CBD1D9;
+		background: #F0F1F1;	
+	}
+	
+	#imgform hr {
+		border: solid 1 #006666;
+	}
+	
+	/* ------------------------------------------------------- */
+	
+	#imgproductform {
+		position:absolute;
+		width:400px;
+		height:auto;
+		top:60px;
+		margin-left:170px;
+		border: 1px solid #A3B7C6;
+		background:#FBFBFB;
+		padding:10px;
+	}
+	#imgproductform iframe {
+		width:400px;
+		height:450px;
+		border: 1px solid #A3B7C6;
+		background:#FFFFFF;
+	}
+	#imgproductform label, #imgform  p{
+		display:block;	
+		background-color:#FEFEFE;
+		padding:0px 0px 0px 0px;
+	}
+	
+	#imgproductform input {
+		border:1px solid #CBD1D9;
+		float:left;
+		clear:left;
+		width: 200px;
+		margin-bottom:20px;
+		background:#FFFFFF;
+	}
+	
+	#imgproductform #submit {
+		background-color:#ECF1F4;
+		padding-bottom:1px;	
+		border:1px solid #CBD1D9;
+		color:#000000;
+		width: 150px;
+		vertical-align:middle;
+	}
+	
+	#imgproductform #submit:hover {
+		background-image:none;
+		border:1px solid #CBD1D9;
+		background: #F0F1F1;	
+	}
+	
+	#imgproductform hr {
+		border: solid 1 #006666;
+	}
+	
+	.clearfloat { /* esta clase debe colocarse en un elemento div o break y debe ser el último elemento antes del cierre de un contenedor que incluya completamente a un elemento flotante */
+    	clear:both;
+        height:0;
+        font-size: 1px;
+        line-height: 0px;
+    }
+
+    div.notice {
+        background-image:url(../img/s_notice.png);
+        background-position:10px 50%;
+        background-repeat:no-repeat;
+        background-color:#FFFFDD;
+        border:0.1em solid #FFD700;
+        margin:0.5em 2.0em 0.5em 0;
+        padding:10px 10px 10px 36px;
+    }
+
+
+    .pago{
+        font-family:Arial, Helvetica, sans-serif;
+		font-size:20px;
+    }

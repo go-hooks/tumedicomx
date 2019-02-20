@@ -1,0 +1,325 @@
+/* ==========================================================================
+   Imports
+   ========================================================================== */
+
+// Normalize and Base CSS
+@import "globals/normalize.less";
+@import "globals/base.less";
+
+// Variables
+@import "globals/variables.less";
+
+// Mixins
+@import "globals/helpers.less";
+@import "globals/mixins.less";
+
+@import "globals/makers.less";
+
+// Fonts
+@import "globals/typo.less"; 
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+body{background: #000;    font-family: 'varela_roundregular';-webkit-font-smoothing: antialiased;}
+a{text-decoration: none;color: inherit;}
+section{min-width: 640px;}
+ul{padding: 0;list-style: none;
+	li{margin: 0}
+}
+
+.wrapper{width: 100%; max-width:1024px;margin: 0 auto;position: relative; padding-top: 130px;}
+
+.menu{position: absolute;width: 100%; max-width:960px; z-index: 500; height:80px; margin: auto; left: 0; right: 0; top: 10px; text-align: center;
+	img{float: left; margin: 25px 10px 25px 0px;}
+	nav{vertical-align: middle;border-left: solid 1px #f8f9f8; padding-left: 10px; margin-left: 10px; float: left;
+		ul{color: #f8f8f8;font-size: 18px; margin: 0px; padding: 0px; height: 100%; line-height: 80px;
+			li{cursor: pointer; display: inline-block; padding: 0px 0px 0px 25px;}
+		}
+	}
+}
+
+.home{
+	.sliderHome{position: absolute;width: 100%;z-index: 100;
+		div{width: 100%;height: 100%}
+		#slide0{background: url(../img/sliderHome/slide0.jpg)center top no-repeat;}
+		#slide1{background: url(../img/sliderHome/slide1.jpg)center top no-repeat;}
+		#slide2{background: url(../img/sliderHome/slide2.jpg)center top no-repeat;}
+		#slide3{background: url(../img/sliderHome/slide3.jpg)center top no-repeat;}
+		#slide5{background: url(../img/sliderHome/slide5.png)center top no-repeat;}
+	}
+	#logo{position: absolute;margin: auto;top: 0;bottom: 0;left: 0;right: 0;display: none; width: 93%; max-width: 943px; min-width: 640px;z-index: 200;}
+}
+
+
+
+.vistacast{
+	>div{width:270px; height:257px; margin: 0px 30px 40px 30px; display: inline-block; position: relative;
+		img{width:100%; height: 100%; transition:0.5s;}
+		span{position: absolute; bottom: 0px; left: 0px; width: 100%; padding: 10px; background-color: rgba(57, 53, 53, 0.4); color: #fff; opacity: 0; transition:0.5s;}
+	}
+	>div:hover{
+		img{ .sepia; opacity: 1; };
+		span{opacity: 1;}
+	} 
+
+ 	p{ margin-bottom:40px; padding-left:30px; color: #f3f2f0; font-size: 17px; width: 45%;display: inline-block; vertical-align: top;}
+} 
+
+
+
+.about{
+	.infoAbout{width: 55%;display: inline-block;vertical-align: top;padding-left: 80px;
+		h2{color: #f3f2f0;font-family: "varela_roundregular";font-size: 46px;line-height: 40px;
+			span{color: #a9e5e3;display: block;}
+		}
+		p{color: #f3f2f0;font-family: "varela_roundregular";font-size: 15px;}
+		ul{color: #f3f2f0;font-family: "varela_roundregular";font-size: 13px;list-style-image: url(../img/bullet.png);margin-left: 10px}
+		h3{color: #f3f2f0;font-family: "varela_roundregular";font-size: 26px;line-height: 30px; margin-bottom: 8px;
+			span{display: block;font-family: "varela_roundregular"; font-weight: bold;}
+		}
+		h4{color: #f3f2f0; margin-top: 0px}
+	}
+	.imageabout{width: 40%;display: inline-block; text-align: center; padding-top: 160px;}
+}
+
+.contact{background: url(../img/backContact.jpg)no-repeat center;min-width: 1024px;
+	.wrapper{
+		>div{padding-top: 30px;padding-left: 70px}
+	}
+
+	h1{color: #f3f2f0;font-family: "varela_roundregular";font-size: 46px;margin-bottom: 0;line-height: 30px;margin-top: 0;
+		span{font-family: "varela_roundregular"; font-weight: bold;}
+		}
+	h2{color: #f3f2f0;font-family: "varela_roundregular";font-size: 22px;text-transform: uppercase;margin-top: 0;
+		span{font-family: "varela_roundregular"; font-weight: bold;}
+	}
+	.socialMedia{width: 170px; margin: 40px 0px 60px 0px;
+				a{width: 34px;height: 34px;display: inline-block;vertical-align: top;background: url(../img/social.png); margin-left: 13px;}
+				#linkedin{background-position: 78px}
+				#vimeo{background-position: 34px}
+	}
+	.emails{
+				p{color: #fff;}
+	}
+
+}
+
+.carouselEvents{height: 50%;position:absolute;width: 100%;z-index: 400;
+			.carouselWrapper{position: relative;width: 100%;padding: 1px;height: 100%;}
+			#next2{display: block;width:48px;height:257px;background: #676767;position: absolute;right: 0;top: 140px;padding-top: 60px;padding-left: 15px;cursor: pointer;}
+			#prev2{display: block;width:48px;height:257px;background: #676767;position: absolute;left: 0;top: 140px;padding-top: 60px;padding-left: 15px;cursor: pointer;}
+			.cast{margin-top: 140px;
+				a{
+					img{height: 257px;
+						&:hover{.sepia;opacity: 1};
+					}
+				}
+			}
+}
+
+
+
+.eventsContent{position: absolute;top: 650px;z-index: 400;
+	>div:nth-child(1){ width: 45%;
+		p{width:80%;}
+	};
+	>div:nth-child(2){padding-top: 60px;width: 53%;
+		li{width: 270px; height:32px; float:left; font-size: 17px; line-height: 18px; margin-bottom: 10px}
+	};
+	>div{display: inline-block;vertical-align: top;color: #f8f8f8;
+		h2{font-family: "varela_roundregular"; font-weight:bold; font-size: 38px;line-height: 35px;text-transform: uppercase;}
+		p{font-size: 15px;margin: 0}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.sliderArtist{width: 100%;height: 100%;position: absolute;top: 0;left: 0;z-index: 100}
+.slideArtist{width: 100%;height: 100%}
+
+.anna{
+	#slide1{background-image: url(../img/artist/anna.jpg);background-position: top right;background-repeat: no-repeat; }
+	#slide2{background-image: url(../img/artist/anna2.jpg);background-position:center center; background-repeat:no-repeat;background-size: 100% }
+	#slide3{background-image: url(../img/artist/anna3.jpg);background-position:center center; background-repeat: no-repeat; }
+	#slide4{background-image: url(../img/artist/anna4.jpg);background-position:center center; background-repeat: no-repeat; }
+}
+
+.irina{
+	#slide1{background-image: url(../img/artist/irina.jpg);background-position: top right;background-repeat: no-repeat; }	
+	#slide2{background-image: url(../img/artist/irina2.jpg);background-position: top right;background-repeat: no-repeat; }	
+	#slide3{background-image: url(../img/artist/irina3.jpg);background-position: top right;background-repeat: no-repeat; }	
+}
+.eduardo{
+	#slide1{background-image: url(../img/artist/eduardo.jpg);background-position: top right;background-repeat: no-repeat; }
+	#slide2{background-image: url(../img/artist/eduardo2.jpg);background-position:top right; background-repeat: no-repeat;}
+	#slide3{background-image: url(../img/artist/eduardo3.jpg);background-position:top right; background-repeat:no-repeat;}
+}
+
+.francois{
+	#slide1{background-image: url(../img/artist/francois.png);background-position: top right;background-repeat: no-repeat; }
+	#slide2{background-image: url(../img/artist/francois2.jpg);background-position:top right;background-repeat:no-repeat}
+}
+
+.hampus{
+	#slide1{background-image: url(../img/artist/hampus.jpg);background-position: top right;background-repeat: no-repeat; }
+	#slide2{background-image: url(../img/artist/hampus2.jpg);background-position:center right;background-repeat:no-repeat; background-size: 100% auto;}
+	#slide3{background-image: url(../img/artist/hampus3.jpg);background-position: top right;background-repeat: no-repeat; }
+	#slide4{background-image: url(../img/artist/hampus4.jpg);background-position: center;background-repeat: no-repeat; background-size: 100% auto; }
+}
+
+.hugo{
+	#slide1{background-image: url(../img/artist/hugo1.jpg);background-position: top right;background-repeat: no-repeat; background-size: auto 100%}
+	#slide2{background-image: url(../img/artist/hugo2.jpg);background-position: top right;background-repeat: no-repeat; background-size: auto 100%}
+	#slide3{background-image: url(../img/artist/hugo3.jpg);background-position: top right;background-repeat: no-repeat; background-size: auto 100%}
+	#slide4{background-image: url(../img/artist/hugo4.jpg);background-position: center;background-repeat: no-repeat; background-size: 100% auto}
+	#slide5{background-image: url(../img/artist/hugo5.jpg);background-position: top right;background-repeat: no-repeat; background-size: auto 100%}
+	#slide6{background-image: url(../img/artist/hugo6.jpg);background-position: top right;background-repeat: no-repeat; background-size: auto 100%}
+}
+
+.irina{
+	#slide1{background-image: url(../img/artist/irina.jpg);background-position: top right;background-repeat: no-repeat; }	
+	#slide2{background-image: url(../img/artist/irina2.jpg);background-position: top right;background-repeat: no-repeat; }	
+	#slide3{background-image: url(../img/artist/irina3.jpg);background-position: top right;background-repeat: no-repeat; }	
+}
+
+.olga{
+	#slide1{background-image: url(../img/artist/olga.jpg);background-position: top right;background-repeat: no-repeat; }
+	#slide2{background-image: url(../img/artist/olga2.jpg);background-position:bottom right; background-repeat:no-repeat;}
+	#slide3{background-image: url(../img/artist/olga3.jpg);background-position: top right;background-repeat: no-repeat; }
+}
+
+.nikita{
+	#slide1{background-image: url(../img/artist/nikita1.jpg);background-position: top right;background-repeat: no-repeat; }
+	#slide2{background-image: url(../img/artist/nikita2.jpg);background-position: top right;background-repeat: no-repeat; }
+	#slide3{background-image: url(../img/artist/nikita3.jpg);background-position: top right;background-repeat: no-repeat; }
+	#slide4{background-image: url(../img/artist/nikita4.jpg);background-position: top right;background-repeat: no-repeat; }
+	#slide5{background-image: url(../img/artist/nikita5.jpg);background-position: top right;background-repeat: no-repeat; }
+}
+
+.darya{
+	#slide1{background-image: url(../img/artist/darya1.jpg);background-position: right bottom;background-repeat: no-repeat; }
+	#slide2{background-image: url(../img/artist/darya2.jpg);background-position: right top;background-repeat: no-repeat; }
+}
+
+.ruslana{
+	#slide1{background-image: url(../img/artist/ruslana.jpg);background-position: top right;background-repeat: no-repeat; background-size: auto 100%; }	
+	#slide2{background-image: url(../img/artist/ruslana2.jpg);background-position: top right;background-repeat: no-repeat; }	
+	#slide3{background-image: url(../img/artist/ruslana3.jpg);background-position: top right;background-repeat: no-repeat; }	
+}
+
+.uuve{
+	#slide1{background-image: url(../img/artist/uuve.jpg);background-position: top right;background-repeat: no-repeat; background-size: auto 100% }
+	#slide2{background-image: url(../img/artist/uuve2.jpg);background-position: top right;background-repeat: no-repeat; background-size: auto 100%}
+}
+
+.vladik{
+	#slide1{background-image: url(../img/artist/vladik.png);background-position: top right;background-repeat: no-repeat; }
+	#slide2{background-image: url(../img/artist/vladik2.jpg);background-position:top right; background-repeat:no-repeat}
+	#slide3{background-image: url(../img/artist/vladik3.jpg);background-position: top right;background-repeat: no-repeat; }
+	#slide4{background-image: url(../img/artist/vladik4.jpg);background-position: top right; background-repeat:no-repeat;  background-size: auto 100%}
+	#slide5{background-image: url(../img/artist/vladik5.jpg);background-position: top right;background-repeat: no-repeat; }
+}
+.duo{
+	#slide1{background-image: url(../img/artist/duo1.jpg);background-position: top right; background-repeat: no-repeat;  background-size: auto 100%; }
+	#slide2{background-image: url(../img/artist/duo2.jpg);background-position: top right; background-repeat: no-repeat;  background-size: 90% auto; }
+	#slide3{background-image: url(../img/artist/duo3.jpg);background-position: top right; background-repeat: no-repeat;  background-size: auto 100%; }
+	#slide4{background-image: url(../img/artist/duo4.jpg);background-position: top right; background-repeat: no-repeat;  background-size: auto 100%; }
+	#slide5{background-image: url(../img/artist/duo5.jpg);background-position: bottom right; background-repeat: no-repeat;  background-size: 100% auto; }
+	#slide6{background-image: url(../img/artist/duo6.jpg);background-position: top right; background-repeat: no-repeat;  background-size: 100% auto; }
+}
+
+
+.artist{color: #f3f2f0;margin-left: 100px;height: 995px;
+	.backArtist{color: #f3f2f0;font-size: 18px;line-height: 15px;background: url(../img/back.png)center bottom no-repeat;width: 104px;height: 120px;position: absolute;left: 0;bottom: 50px;cursor: pointer;z-index: 300;
+		span{color:#aae6e4;display: block;}
+	}
+	.wrapInfo{width: 47%;padding-top: 70px;z-index: 300;position: relative;
+		.lonely{margin-top: 0px}
+		h1{font-size: 48px;text-transform: uppercase;line-height: 48px;margin-top: 0}
+		p{font-size: 14px;}
+		h2{font-size: 31px;text-transform: uppercase;
+			span{font-family: "varela_roundregular";font-weight: bold; display: block;line-height: 20px}
+		}
+		h3{font-family: "varela_roundregular";font-weight: bold; font-size: 18px;margin-bottom: 0}
+		ul{margin-top: 0;
+			li{font-size: 14px}
+		}
+	}
+}
+
+
+
+
+
+@media only screen and (min-width : 1024px) and (max-width: 1920px) {
+
+
+	html,body{height:100%;}
+	section{min-width: 1024px; min-height: 100%; height: 100%;
+		.wrapper{
+			height: 100%;
+		}
+	}
+
+	.home{height: 100%; min-height: 100%;
+		.sliderHome{height: 100%;
+			div{width: 100%;height: 100%}
+			#slide0{background: url(../img/sliderHome/slide0.jpg)center center no-repeat;}
+			#slide1{background: url(../img/sliderHome/slide1.jpg)center center no-repeat;}
+			#slide2{background: url(../img/sliderHome/slide2.jpg)center center no-repeat;}
+			#slide3{background: url(../img/sliderHome/slide3.jpg)center center no-repeat;}
+			#slide5{background: url(../img/sliderHome/slide5.png)center center no-repeat;}
+		}
+		.wrapper{height: 100%;}
+	}
+
+		
+	.eventsContent{height:40%;top: 60%;
+		>div:nth-child(1){ width: 45%;
+			p{width:80%;}
+		};
+		>div:nth-child(2){padding-top: 60px;width: 53%;
+			li{width: 270px; height:32px; float:left; font-size: 18px; line-height: 18px; margin-bottom: 10px}
+		};
+		>div{display: inline-block;vertical-align: top;color: #f8f8f8;
+			h2{font-family: "varela_roundregular"; font-weight:bold;font-size: 40px;line-height: 35px;text-transform: uppercase;}
+			p{font-size: 15px;margin: 0}
+		}
+	}
+
+
+
+	.carouselEvents{height: 50%;position:absolute;width: 100%;z-index: 400;
+			.carouselWrapper{position: relative;height: 100%;
+				#next2{top: 140px;}
+				#prev2{top: 140px;}
+				.cast{margin-top: 140px;}
+			}
+	}
+
+	.contact{height: 100%;
+		.wrapper{height: 100%;}
+	}
+
+	.artist{height: 100%;}
+
+
+}

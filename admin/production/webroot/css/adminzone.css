@@ -1,0 +1,89 @@
+@charset "utf-8";
+/* CSS Document */
+
+#main #adminzone {
+	width:250px;
+	height:200px;
+}
+#main #adminzonedos {
+	width:250px;
+	height:120px;
+}
+
+#adminzone, #adminzonedos {
+	border:1px solid #CBD1D9;
+	padding:10px;
+}
+
+#camponom {
+	font-size:1.1em;
+	width:70%;
+}
+
+#main #adminzone input, #adminzonedos input {
+	border:1px solid #CBD1D9;
+	background:#FFFFFF;
+	float:right;
+	clear:right;
+}
+
+#main #adminzone label, #adminzonedos label{
+	display:block;
+	background-color:#FEFEFE;
+	cursor:pointer;
+}
+
+#main #adminzone select, #adminzonedos select {
+	border:1px solid #CBD1D9;
+	float:right;
+	clear:right;
+	width: 70%;
+	background:#FFFFFF;
+}
+
+#main #adminzone #submit, #adminzonedos #submit {
+	background-color:#ECF1F4;
+	padding-bottom:1px;	
+	border:1px solid #CBD1D9;
+	color:#000000;
+	width: 100px;
+}
+
+#main #adminzone #submit:hover, #adminzonedos #submit:hover {
+	background-image:none;
+	border:1px solid #CBD1D9;
+	background: #F0F1F1;	
+}
+.zonebox {
+	width:280px;
+	margin-bottom:1px;
+}
+
+.zonebox input {
+	border:1px solid #CBD1D9;
+	background:#FFFFFF;
+	float:right;
+	clear:right;
+}
+
+.zonebox label {
+	display:block;
+	background-color:#FEFEFE;
+	cursor:pointer;
+}
+
+.zonebox select {
+	border:1px solid #CBD1D9;
+	float:right;
+	clear:right;
+	width: 70%;
+	background:#FFFFFF;
+}
+
+.zonebox #submit {
+	background-color:#ECF1F4;
+	padding-bottom:1px;	
+	border:1px solid #CBD1D9;
+	color:#000000;
+	width: 100px;
+}

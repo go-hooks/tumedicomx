@@ -1,0 +1,20 @@
+/* Tooltips */
+
+.marco-imagen-detalle {
+	width: 500;
+	cursor: crosshair;
+	position: relative;
+	overflow: hidden;
+}
+.marco-imagen-detalle img {
+	width: 500;
+}
+.marco-imagen-detalle a {
+	width: 17px;
+	height: 17px;
+	text-align: center;
+	display: block;
+	position: absolute;
+	background-color: #FAE1FB;
+	border: 1px solid red;
+}

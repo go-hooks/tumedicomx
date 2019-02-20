@@ -1,0 +1,57 @@
+/*
+|--------------------------------------------------------------------------
+| HELPERS
+|--------------------------------------------------------------------------
+*/
+.upper {
+  text-transform: uppercase;
+}
+.lower {
+  text-transform: lowercase;
+}
+.capitalize {
+  text-transform: capitalize;
+}
+.bold {
+  font-weight: bold;
+}
+.lighter {
+  font-weight: lighter;
+}
+.normal {
+  font-weight: normal;
+  font-style: normal;
+}
+.italic {
+  font-style: italic;
+}
+.oblique {
+  font-style: oblique;
+}
+.text-center {
+  text-align: center;
+}
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
+.text-justify {
+  text-align: justify;
+}
+.d-overline {
+  text-decoration: overline;
+}
+.d-underline {
+  text-decoration: underline;
+}
+.d-blink {
+  text-decoration: blink;
+}
+.d-line-through {
+  text-decoration: line-through;
+}
+.container {
+  width: 100%;
+}

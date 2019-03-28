@@ -18,8 +18,7 @@
         
     }
    }
-            
-    
+             
     $ubicacion='inicio';
     
     if(isset($_GET['salir'])):
@@ -27,18 +26,14 @@
         session_destroy();
     endif;   
     
-    
     if(isset($_GET['error'])):
-        ?>
-        
+        ?>   
             <script>                    
                     alert("El Usuario y/o Contraseña son incorrectos.");                    
             </script>
-
         <?php
     endif; 
-      
-    
+       
     include('includes/metatags.php'); 
         
     $where = "elim = 0"
@@ -48,7 +43,6 @@
            . " AND fecha_fin >= '" . date("Y/m/d") . "'" ;
     $banners2 = get_all_actived_inactived('banners', $where, 'RAND()');     
        
-    
     $where = "elim = 0"
             . " AND localizacion = 'inicio'"
             . " AND tipo = 3"
@@ -69,8 +63,7 @@
             . " AND fecha_inicio <= '" . date("Y/m/d") . "'"
            . " AND fecha_fin >= '" . date("Y/m/d") . "'" ;
     $banners5 = get_all_actived_inactived('banners', $where, 'RAND()');  
-    
-            
+         
     $sql = " SELECT * FROM registros r"
             . " INNER JOIN"
             . " medicos m"
@@ -79,7 +72,6 @@
             . " r.elim=0 AND r.autorizado=1 AND r.destacado=1";   
 
     $medicos = get_sql($sql);        
-
 
     $sql = " SELECT * FROM registros r"
             . " INNER JOIN"
@@ -99,8 +91,6 @@
 
     $laboratorios = get_sql($sql);      
     
-    
-    
     $sql = " SELECT * FROM invasivos"
             . " WHERE"
             . " elim = 0"            
@@ -109,7 +99,6 @@
             . " AND fecha_inicio <= '" . date("Y/m/d") . "'"
             . " AND fecha_fin >= '" . date("Y/m/d") . "'" ;
     $invasivo = get_one_sql($sql);      
-
     
     $sql = " SELECT * FROM video";
     $video = get_one_sql($sql);      
@@ -119,22 +108,15 @@
 </head>
 <body id="home">
 
-
-    <?php if(! isset($_SESSION['home'])): ?>        
-        
+    <?php if(! isset($_SESSION['home'])): ?>             
         <?php if(!empty($invasivo)): ?>        
     
             <?php $_SESSION['home'] = 1 ?>
             <a href="<?php echo UP_IMG_PATH . $invasivo['imagen']  ?>" class="fancybox" id="promocion"></a>                
             
-        <?php endif; ?>        
-            
-            
+        <?php endif; ?>               
     <?php endif; ?>
     
-
-
-
 <?php include('includes/header.php'); ?>
 <section class="wrapper">
 
@@ -207,8 +189,6 @@
                         
                     ?>
 
-                    
-
                     <div class="ficha">
                         <h4><?php echo replace($medico['nombre']) . ' ' . replace($medico['apellidos']) ?></h4>
                         <ul>
@@ -279,8 +259,6 @@
                                         <img src=" <?php echo UP_IMG_PATH . $seguro['imagen'] ?>" width="50px">
                                         
                                     <?php endforeach; ?>                                
-                                    
-
      
                                 </p>
 
@@ -437,8 +415,7 @@
                                         <img src=" <?php echo UP_IMG_PATH . $tarjeta['imagen'] ?>" width="50px">
                                         
                                     <?php endforeach; ?>
-                                    
-                                    
+                                                            
                                     
                                 </p>
                                 <h5><img src="img/ico-seguros.jpg">SEGUROS</h5>
@@ -450,7 +427,6 @@
                                         
                                     <?php endforeach; ?>                                
 
-     
                                 </p>
 
                                 <?php 
@@ -461,7 +437,6 @@
                                        . " AND fecha_fin >= '" . date("Y/m/d") . "'" ;
                                 $sitio = get_all_actived_inactived('registros', $where, 'id');  
                                 
-
                                 ?>
                                 
                                 <?php if(count($sitio)): ?>
@@ -475,19 +450,14 @@
                                      
                                 </form>
                                 
-                                <?php   endif; ?>
-                                
+                                <?php   endif; ?>                         
                                 
                             </li>
 
                         </ul>
                     </div>
                     
-                    <?php endforeach; ?>                
-                    
-                    
-                    
-                    
+                    <?php endforeach; ?>                                    
                     
                 </div>
 
@@ -496,7 +466,6 @@
                     <img src="img/flecha-upcatalogo.png" id="prevclin">
                 </div>
             </div>
-
 
             <div class="catalogo labs" >
                 <div class="cycle-slideshow"
@@ -507,9 +476,7 @@
                 data-cycle-prev="#prevlabs"
                 data-cycle-carousel-visible=3
                 data-cycle-carousel-vertical=true
-                >
-                    
-     
+                >   
                     <?php foreach($laboratorios as $laboratorio): ?>
 
                     <?php 
@@ -550,8 +517,7 @@
                         $seguros = get_sql($sql);   
                         
                     ?>
-
-                    
+               
                     <div class="ficha">
                         <h4><?php echo replace($laboratorio['nombre'])  ?></h4>
                         <ul>
@@ -586,7 +552,6 @@
                                     </p>
                                 <?php   endif; ?>  
                                     
-
                             </li>
                             <li>
                                 <h5><img src="img/ico-mail.png"> CORREO ELECTRÓNICO</h5>
@@ -610,8 +575,7 @@
                                         <img src=" <?php echo UP_IMG_PATH . $seguro['imagen'] ?>" width="50px">
                                         
                                     <?php endforeach; ?>                                
-                                    
-     
+                                       
                                 </p>
 
                                 <?php 
@@ -622,7 +586,6 @@
                                        . " AND fecha_fin >= '" . date("Y/m/d") . "'" ;
                                 $sitio = get_all_actived_inactived('registros', $where, 'id');  
                                 
-
                                 ?>
                                 
                                 <?php if(count($sitio)): ?>
@@ -632,12 +595,10 @@
                                     <input type="hidden" name="tipo"  value="laboratorios">
                                     <input type="hidden" name="id"  value="<?php echo $laboratorio['id']  ?>">
                                     <input type="submit" class="btnminisitio" value="VER MINI SITIO">
-                                    
-                                     
+                                                              
                                 </form>
                                 
-                                <?php   endif; ?>
-                                
+                                <?php   endif; ?>       
                                 
                             </li>
 
@@ -645,10 +606,6 @@
                     </div>
                     
                     <?php endforeach; ?>                
-                    
-
-                    
-
                 </div>
 
                 <div class="catalogocontrols">
@@ -658,10 +615,6 @@
             </div>
         </div>
     </div>
-
-
-
-
 
     <div class="colder">
         <h3>Regístrate con nosotros: </h3>
@@ -677,8 +630,7 @@
             <a href="https://www.facebook.com/tumedicolaguna" target="_blank"><img src="img/social_facebook.png" class="medio" ></a>
             <a href="http://instagram.com/tumedicolaguna" target="_blank"><img src="img/social_instagram.png" ></a>
         </div>
-
-        
+  
         <a href="anunciate.php">
         <h3>Anúnciate en un Banner</h3>
         </a>
@@ -691,12 +643,9 @@
                     <img src="<?php echo UP_IMG_PATH . $banner['imagen']  ?>" >
                 </a>
 
-            <?php endforeach; ?>            
-            
-            
+            <?php endforeach; ?>                      
         </div>
-        
-        
+           
         <div class="banner4 cycle-slideshow" data-cycle-slides='> a' data-cycle-timeout="<?php echo (int)($timmer['tiempo'] * 1000) ?>">
             
             <?php foreach ($banners4 as $banner): ?>
@@ -706,10 +655,7 @@
                 </a>
 
             <?php endforeach; ?>
-            
-
         </div>
-        
         
         <div class="banner5 cycle-slideshow" data-cycle-slides='> a' data-cycle-timeout="<?php echo (int)($timmer['tiempo'] * 1000) ?>">
             
@@ -719,12 +665,9 @@
                 <img src="<?php echo UP_IMG_PATH . $banner['imagen']  ?>" >
             </a>
         
-        <?php endforeach; ?>            
-            
-            
+        <?php endforeach; ?>                       
         </div>
-        
-        
+              
     <div id="video">
        
         <?php if(isset($video['video'])): ?>   
@@ -744,8 +687,7 @@
     
     <div id="banner1">
         <div class="cycle-slideshow" data-cycle-slides='> a'>
-            
-            
+                
         <?php foreach ($banners2 as $banner): ?>
             
             <a href="<?php echo $banner['url']  ?>" target="_blank">
@@ -753,29 +695,20 @@
             </a>
         
         <?php endforeach; ?>
-            
-            
+                   
         </div>
     </div>
-
-    
   
-    
     <div class="clear"></div>
 </section>
 
-
-
-
 <?php include('includes/footer.php'); ?>
-
 
 <!-- JQUERY -->
 <script src="js/vendor/jquery.cycle2.min.js"></script>
 <script src="js/vendor/jquery.cycle2.carousel.min.js"></script>
 <script src="js/fancybox/source/jquery.fancybox.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
-
 
 <script>
 

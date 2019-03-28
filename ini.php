@@ -4,16 +4,13 @@
     Descripcion: Cargador de modelos y vistas asi como todo archivo que se nesecita incluir para
                  el buen funcionamiento del cms.
     ---------------------------------------------------------------------------------------
-    @autor Sustam.com ©
-    @version 1.0
+    @autor tumedicomx 2019 ©
 
     Develop by
-    01/02/2012 : Jesus Nazareth Gutierrez Hernandez (Developer)
-    01/02/2012 : Ricardo Castellanos Rivera (Developer)
-    01/12/2012 : Jose Luis Quintero Malacon (Css structuring)
+    01/01/2019 : tumedico mx
 
     Updated by
-    dd/mm/yyyy : Nombre de quien modifico el archivo
+    03/27/2019 : Alejandro Valdés Fuentes (Developer)
 */
     // DEFAULT
     include 'config.php';

@@ -25,8 +25,7 @@
     <div id="loading_slogan">
         <img src="img/Loading/slogan.png"> 
     </div>
-    
-    
+      
     <a href="index.php">
         
         <div id="loading_entrar">

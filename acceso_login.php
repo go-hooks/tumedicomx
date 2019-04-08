@@ -23,7 +23,6 @@ session_name('medico_laguna');
             //definimos usuario_password con el password del usuario de la sesi�n actual (formato md5 encriptado)
             $_SESSION['usuario_password'] = $aUsuario['password'];
 
-
             $nConn = db_connect();   
             //////////////////////////////////////////////////////////////////////////////////////////////////                     
 
@@ -41,8 +40,6 @@ session_name('medico_laguna');
                 $_SESSION['nombre_usuario'] = $aResult['genero'] . ' ' . $aResult['nombre'] . ' ' . $aResult['apellidos']; 
                 redirect('index.php?ok=1');
             }
-        
-            //////////////////////////////////////////////////////////////////////////////////////////////////
             
             $sSql = "SELECT * "
                   . "FROM hospitales "
@@ -57,9 +54,7 @@ session_name('medico_laguna');
                 $_SESSION['nombre_usuario'] = $aResult['nombre']; 
                 redirect('index.php?ok=1');            
             }
-            
-            //////////////////////////////////////////////////////////////////////////////////////////////////
-            
+    
             $sSql = "SELECT * "
                   . "FROM laboratorios "
                   . "WHERE id= " . $aUsuario['id']; 
@@ -73,8 +68,6 @@ session_name('medico_laguna');
                 $_SESSION['nombre_usuario'] = $aResult['nombre']; 
                 redirect('index.php?ok=1');
             }
-
-            //////////////////////////////////////////////////////////////////////////////////////////////////
             
             $sSql = "SELECT * "
                   . "FROM servicios "
@@ -89,8 +82,6 @@ session_name('medico_laguna');
                 $_SESSION['nombre_usuario'] = $aResult['nombre']; 
                 redirect('index.php?ok=1');
             }            
-        
-            //////////////////////////////////////////////////////////////////////////////////////////////////
             
             $sSql = "SELECT * "
                   . "FROM proveedores "
@@ -104,9 +95,7 @@ session_name('medico_laguna');
                 $_SESSION['usuario_tipo'] = 'proveedor';
                 $_SESSION['nombre_usuario'] = $aResult['nombre']; 
                 redirect('index.php?ok=1');
-            }
-            
-            //////////////////////////////////////////////////////////////////////////////////////////////////
+            }            
                         
         endif;
     endif;

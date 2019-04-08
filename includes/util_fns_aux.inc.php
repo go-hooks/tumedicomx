@@ -7,14 +7,12 @@
     @version 1.0
 
     Develop by
-    01/02/2012 : Jesus Nazareth Gutierrez Hernandez (Developer)
-    01/02/2012 : Ricardo Castellanos Rivera (Developer)
-    01/12/2012 : Jose Luis Quintero Malacon (Css structuring)
+    01/02/2012 : (Developer)
+
 
     Updated by
     dd/mm/yyyy : Nombre de quien modifico el archivo
 */
-
     
     //Función que executa un sql
     function get_sql($sSql) {

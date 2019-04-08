@@ -5,11 +5,10 @@
     $ubicacion='inicio';
     
     require_once(dirname(__FILE__) . "/ini.php");    
-    include('includes/metatags.php'); 
-    
+    include('includes/metatags.php');    
 ?>
 
-<title>Tu Medico Laguna</title>
+<title>Tu Medico MX</title>
 </head>
 <body id="aviso">
 
@@ -26,11 +25,9 @@
         <p>La información proporcionada en <b>www.tumedicomx.com</b> tiene el objeto de informar, no reemplazar, la relación que existe entre un paciente y/o <b>"Usuarios"</b> del <b>“Portal”</b> con el profesional de la salud o institución médica.</p>
         
         <p>La misión de este sitio web <b>www.tumedicomx.com</b>, es la creación y gestión de un directorio médico que incluya profesionales de la salud e instituciones médicas que permitan a los <b>“Usuarios”</b> de este sitio web acceder a información general y específica de aquellos profesionales e instituciones médicas (en adelante <b>"Clientes"</b>), tales como datos de contacto, fotografías, mapas de ubicación, descripción de servicios,  o cualquier otra información considerada oportuna por los <b>“Clientes”</b> y que <b>tumedicomx</b> considere ofrecer.</p>
-        
-        
+            
         <h3>Capítulo 1 - Definición de Conceptos</h3>
-        
-        
+             
         <p>Para efectos del presente apartado, las partes acuerdan que los conceptos que a continuación se describen y que se utilizan en el texto del presente, se entenderá de conformidad con las siguientes definiciones:</p>
         
         <p><b>Portal:</b> Se refiere al sitio web <b>www.tumedicomx.com</b> el cual ofrece al usuario ingresar al portal de manera gratuita, fácil y rápida para hacer uso de una serie de recursos  y de servicios relacionados a la salud además de tener acceso a  servicios de publicidad (aplican costos extras). </p>
@@ -148,7 +145,6 @@
 </section>
 
 <?php include('includes/footer.php'); ?>
-
 
 <!-- JQUERY -->
 <script src="js/vendor/jquery.cycle2.min.js"></script>

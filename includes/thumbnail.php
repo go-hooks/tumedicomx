@@ -2,8 +2,6 @@
 
 class Img2Thumb	{
 
-
-
 	var $bg_red;
 
 	var $bg_green;
@@ -11,8 +9,6 @@ class Img2Thumb	{
 	var $bg_blue;
 
 	var $maxSize;
-
-
 
 	function Img2Thumb($filename,$newxsize,$newysize,$fileout='',$thumbMaxSize=0,$bgred=255,$bggreen=255,$bgblue=255)
 

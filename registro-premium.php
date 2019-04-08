@@ -17,15 +17,13 @@
     $tarjetas = get_all_actived_inactived('tarjetas', $where, 'id');     
 
     $where = "elim = 0";
-    $estados = get_all_actived_inactived('estados', $where, 'id');     
-
-    
+    $estados = get_all_actived_inactived('estados', $where, 'id');        
 ?>
 
 <script type="text/javascript" src="municipios.js"></script>
 <script type="text/javascript" src="js/validacion.js"></script>
 
-<title>Tu Medico Laguna</title>
+<title>Tu Medico MX</title>
 </head>
 <body id="registro">
 
@@ -42,22 +40,17 @@
             <?php
             
                 if(isset($_GET['error']))
-                {
-                    
+                {                 
                     if($_GET['error']==1) echo 'Debe aceptar terminos y condiciones.';
                     if($_GET['error']==2) echo 'El correo no es valido.';
                     if($_GET['error']==3) echo 'El usuario ya ha sido registrado.';
                     if($_GET['error']==4) echo 'Las contraseñas no coinciden.';
                     if($_GET['error']==5) echo 'Seleccione estado y municipio.';
                     if($_GET['error']==6) echo 'Debe seleccionar el genero del medico.';
-                    if($_GET['error']==7) echo 'Seleccione una especialidad.';
-                    
-                }
-            
+                    if($_GET['error']==7) echo 'Seleccione una especialidad.';                
+                }         
             ?>
-            </span>
-        
-        
+            </span>      
     </div>
 
 <form enctype="multipart/form-data" class="clear" name="contacto"  method="post" action="envia_registro_premium.php" onsubmit="return validacion(correo_contacto,password,password2)">  
@@ -80,11 +73,9 @@
                         <option value="Redes Sociales" >Redes Sociales</option>                                                                                                
                         <option value="Vía telefónica" >Vía telefónica</option>
 
-                    </select>   
-                    
+                    </select>          
                 </th>
-            </tr>
-            
+            </tr>          
         </table>
         
     </div>
@@ -134,19 +125,11 @@
                         
                         <?php endforeach; ?>
                         
-                    </select>                     
-                
+                    </select>                              
                 </td>
-                
-                
-                <td>MUNICIPIO*
-                    
-                    <select required="" class="txt txt2" name="municipio_id" id="municipio_id">                                                    
-                        
-                        
-                    </select>                      
-                    
-                
+                         
+                <td>MUNICIPIO*     
+                    <select required="" class="txt txt2" name="municipio_id" id="municipio_id"></select>                                  
                 </td>
                 
             </tr>
@@ -307,8 +290,7 @@
                 <td><input type="file" name="Banner" id="Banner" /></td>
             </tr>
             
-        </table>
-        
+        </table>     
         <div class="clear"></div>
     </div>
     
@@ -318,13 +300,10 @@
             <input type="radio" value="2" name="subscripcion"> 2 AÑOS
             <input type="radio" value="3" name="subscripcion"> 3 AÑOS
         </p>
-
-
         <p class="radios">SELECCIONA TU FORMA DE PAGO
             <input type="radio" value="TRANSFERENCIA" name="forma_de_pago" checked=""> TRANSEFERENCIA BANCARIA
             <input type="radio" value="EFECTIVO" name="forma_de_pago"> EFECTIVO
         </p>
-
     </div>    
     
     <p>(*)Aplica un costo extra, consulta esta modalidad con tu asesor de venta.</p>
@@ -335,19 +314,13 @@
                 <input type="submit" class="btnregistro fr" value="ENVIAR">
             </td>
         </tr>
-    </table>
-        
-        
-        
+    </table>        
 </form>
      
-
     <div class="clear2"></div>
 </section>
 
-
 <?php include('includes/footer.php'); ?>
-
 
 <!-- JQUERY -->
 <script src="js/vendor/jquery.cycle2.min.js"></script>

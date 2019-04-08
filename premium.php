@@ -6,10 +6,9 @@
     
     require_once(dirname(__FILE__) . "/ini.php");    
     include('includes/metatags.php'); 
-
 ?>
 
-<title>Tu Medico Laguna</title>
+<title>Tu Medico MX</title>
 </head>
 <body id="gratis">
 
@@ -41,17 +40,14 @@
 		<a href="registro-premium.php"><img src="img/img-gratis1.jpg"></a>
 		<a href="registro-premium-hospital.php"><img src="img/img-gratis2.jpg"></a>
 		<a href="registro-premium-laboratorio.php"><img src="img/img-registro-laboratorio.png"></a>
-                <a href="registro-premium-servicios.php"><img src="img/img-registro-servicios.png"></a>
+    	<a href="registro-premium-servicios.php"><img src="img/img-registro-servicios.png"></a>
 		<a href="registro-premium-proveedores.php"><img src="img/img-registro-proveedores.png"></a>
-		
 
-
-                <a href="registro-premium.php"><input type="button" class="btninstitucion" value="PROFESIONAL"></a>
+        <a href="registro-premium.php"><input type="button" class="btninstitucion" value="PROFESIONAL"></a>
 		<a href="registro-premium-hospital.php"><input type="button" class="btninstitucion" value="HOSPITALES"></a>
 		<a href="registro-premium-laboratorio.php"><input type="button" class="btninstitucion" value="LABORATORIO"></a>
-                <a href="registro-premium-servicios.php"><input type="button" class="btninstitucion" value="SERVICIOS"></a>
-		<a href="registro-premium-proveedores.php"><input type="button" class="btninstitucion" value="PROVEEDORES"></a>
-		
+        <a href="registro-premium-servicios.php"><input type="button" class="btninstitucion" value="SERVICIOS"></a>
+		<a href="registro-premium-proveedores.php"><input type="button" class="btninstitucion" value="PROVEEDORES"></a>		
 	</div>
 	    <div class="clear2"></div>
 </section>

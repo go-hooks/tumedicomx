@@ -23,8 +23,7 @@
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  *
  *
- * @author      Serban Ghita <serbanghita@gmail.com>
- *              Victor Stanciu <vic.stanciu@gmail.com> (until v.1.0)
+ * @author      
  * @license     http://www.opensource.org/licenses/mit-license.php  MIT License
  * @link        Official page: http://mobiledetect.net
  *              GitHub Repository: https://github.com/serbanghita/Mobile-Detect

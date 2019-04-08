@@ -3,16 +3,13 @@
     Nombre del archivo: config.php
     Descripcion: Variables globales de configuracion
     ---------------------------------------------------------------------------------------
-    @autor Sustam.com ©
     @version 1.0
 
     Develop by
-    01/02/2012 : Jesus Nazareth Gutierrez Hernandez (Developer)
-    01/02/2012 : Ricardo Castellanos Rivera (Developer)
-    01/12/2012 : Jose Luis Quintero Malacon (Css structuring)
+    01/02/2012 : (Developer)
 
     Updated by
-    dd/mm/yyyy : Nombre de quien modifico el archivo
+    dd/mm/yyyy : Alejandro Valdés Fuentes (Developer)
 */
 
 if ($_SERVER['REMOTE_ADDR'] == '127.0.0.1') {

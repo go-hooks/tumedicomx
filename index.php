@@ -12,10 +12,8 @@
    {
 
     if(! isset($_SESSION['contador']))
-    {
-        
-        redirect('loading.php');
-        
+    {       
+        redirect('loading.php');     
     }
    }
              
@@ -107,7 +105,6 @@
 
 </head>
 <body id="home">
-
     <?php if(! isset($_SESSION['home'])): ?>             
         <?php if(!empty($invasivo)): ?>        
     
@@ -125,9 +122,9 @@
     <div class="colizq">
         <h3>Destacados: </h3>
         <ul class="catalogopestanas">
-            <li data-class=".medi" class="activo"><img src="img/ico-medicos.jpg">Médicos</li>
-            <li data-class=".clin"><img src="img/ico-hospital.jpg">Hospitales y Clínicas</li>
-            <li data-class=".labs"><img src="img/ico-labs.jpg">Laboratorios</li>
+            <li id="medicosPestaña" data-class=".medi" class="activo"><img src="img/ico-medicos.jpg">Médicos</li>
+            <li id="hospitalesPestaña" data-class=".clin"><img src="img/ico-hospital.jpg">Hospitales y Clínicas</li>
+            <li id="laboratoriosPestaña" data-class=".labs"><img src="img/ico-labs.jpg">Laboratorios</li>
         </ul>
        <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
         <div class="ocultar">
@@ -269,19 +266,14 @@
                                         . " AND fecha_inicio <= '" . date("Y/m/d") . "'"
                                         . " AND fecha_fin >= '" . date("Y/m/d") . "'" ;		
                                 $sitio = get_all_actived_inactived('registros', $where, 'id');  
-                                
-
                                 ?>
                                 
                                 <?php if(count($sitio)): ?>
                                 
-                                <form name="minisitio"  method="get" action="minisitio.php">
-                                    
+                                <form name="minisitio"  method="get" action="minisitio.php">                                  
                                     <input type="hidden" name="tipo"  value="medicos">
                                     <input type="hidden" name="id"  value="<?php echo $medico['id']  ?>">
-                                    <input type="submit" class="btnminisitio" value="VER MINI SITIO">
-                                    
-                                     
+                                    <input type="submit" class="btnminisitio" value="VER MINI SITIO">                                  
                                 </form>
                                 
                                 <?php   endif; ?>
@@ -312,10 +304,7 @@
                 data-cycle-carousel-visible=3
                 data-cycle-carousel-vertical=true
                 >
-                    
-                    
-
-                    
+                                    
                     <?php foreach($hospitales as $hospital): ?>
 
                     <?php 
@@ -619,19 +608,19 @@
     <div class="colder">
         <h3>Regístrate con nosotros: </h3>
         <div id="zonaregistro">
-            <a href="gratis.php"><input type="button" value="REGISTRO GRATUITO" class="btnregistro"></a>
-            <a href="premium.php"><input type="button" value="REGISTRO PREMIUM" class="btnregistro"></a>           
+            <a href="gratis.php"><input id="registroGratis" type="button" value="REGISTRO GRATUITO" class="btnregistro"></a>
+            <a href="premium.php"><input id="registroPremium" type="button" value="REGISTRO PREMIUM" class="btnregistro"></a>           
         </div>
         
         <h3>Síguenos en:</h3>
         
         <div class="redes">           
-            <a href="https://twitter.com/TuMedicolaguna" target="_blank"><img src="img/social_twitter.png" ></a>
-            <a href="https://www.facebook.com/tumedicolaguna" target="_blank"><img src="img/social_facebook.png" class="medio" ></a>
-            <a href="http://instagram.com/tumedicolaguna" target="_blank"><img src="img/social_instagram.png" ></a>
+            <a id="twitterLogo" href="https://twitter.com/TuMedicolaguna" target="_blank"><img src="img/social_twitter.png" ></a>
+            <a id="twitterFacebook" href="https://www.facebook.com/tumedicolaguna" target="_blank"><img src="img/social_facebook.png" class="medio" ></a>
+            <a id="twitterInstagram" href="http://instagram.com/tumedicolaguna" target="_blank"><img src="img/social_instagram.png" ></a>
         </div>
   
-        <a href="anunciate.php">
+        <a id="anunciate" href="anunciate.php">
         <h3>Anúnciate en un Banner</h3>
         </a>
         
@@ -676,7 +665,7 @@
         <?php endif; ?>
         <div class="ponplay">
             <div id="play"></div>
-        </div>     
+    </div>     
         
     </div>  
       <div class="various fancybox.iframe"  id="formvarious" style="display:none;">

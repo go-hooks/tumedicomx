@@ -2,7 +2,7 @@
 	/**
 	 * MySQLConnect.class.php
 	 * Motor de conexion con la base de datos MySQL
-	 * @autor: Jesus Nazareth Gutierrez Hernandez
+	 * @autor: 
 	 * --------------------------------------------------- 
 	 */
  

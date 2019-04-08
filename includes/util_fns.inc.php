@@ -21,11 +21,8 @@ function borrar_archivo_servidor($fileArray) {
              return TRUE;
         } else {             
              return FALSE;
-        }
-
-    
+        }  
 }
-
 
 
 function subir_al_servidor($fileArray, $mymes = array()) {

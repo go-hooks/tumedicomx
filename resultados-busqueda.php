@@ -7,7 +7,6 @@
     require_once(dirname(__FILE__) . "/ini.php");    
     include('includes/metatags.php'); 
 
-
     $cuenta=0;
     
     if(isset($_POST['buscar']))
@@ -27,7 +26,6 @@
                 . " ORDER BY nombre, apellidos";   
 
         $medicos = get_sql($sql);        
-
 
         $sql = " SELECT * FROM registros r"
                 . " INNER JOIN"
@@ -59,7 +57,6 @@
 
         $laboratorios = get_sql($sql);         
     
-        
         $sql = " SELECT * FROM registros r"
                 . " INNER JOIN"
                 . " servicios s"
@@ -73,10 +70,8 @@
                 . ")"
                 . " ORDER BY nombre";   
 
-
         $servicios = get_sql($sql);  
-        
-        
+              
         $sql = " SELECT * FROM registros r"
                 . " INNER JOIN"
                 . " proveedores p"
@@ -90,22 +85,19 @@
                 . ")"
                 . " ORDER BY nombre";   
 
-
         $proveedores = get_sql($sql);  
-        
-        
+               
     }
     else
     {
         redirect('index.php');
     }
-    
-    
+        
     $total = count($medicos) + count($hospitales) + count($laboratorios) + count($servicios) + count($proveedores);
     
 ?>
 
-<title>Tu Medico Laguna</title>
+<title>Tu Medico MX</title>
 </head>
 <body id="busqueda">
 
@@ -120,14 +112,7 @@
     <ul class="busqueda">
         <li>
             <div class="resultados">
-                
-                    
-                
-                <!--/////////////////////////////////////////////////////////////////////////////////////////-->
-                <!--/////////////////////////////////////////////////////////////////////////////////////////-->
-                <!--/////////////////////////////////////////////////////////////////////////////////////////-->
-                <!--/////////////////////////////////////////////////////////////////////////////////////////-->
-                    
+                                   
                 <?php foreach($medicos as $key=>$medico): ?>
 
                 <?php 
@@ -173,14 +158,11 @@
                             . " registro_id = ". $medico['id'] ;
 
                     $seguros = get_sql($sql);   
-                  
-                    
+                                
                     $cuenta+=1;
-                    
-                    
+                                  
                 ?>
-
-                
+        
                 <div class="ficha <?php echo ($cuenta % 2) ? '' : 'noborde' ; ?>">
                     <h4><?php echo  replace($medico['nombre']) . ' ' . replace($medico['apellidos']) ?></h4>
                     <ul>
@@ -218,29 +200,24 @@
                                               <?php  echo $medico['radio_contacto'] ;  ?>
                                         </p>
                                     <?php   endif; ?> 
-                                        
-                                        
+                                                                  
                                 <?php if($medico['horario']!=''): ?>                                                
                                     <h5><img src="img/ico-ubicacion.png"> HORARIO:</h5>
                                     <p>
                                           <?php  echo $medico['horario'] ;  ?>
                                     </p>
-                                <?php   endif; ?>    
-                                    
+                                <?php   endif; ?>                 
                         </li>
                         <li>
                             <h5><img src="img/ico-mail.png"> CORREO ELECTRÓNICO</h5>
                             <p><?php echo $medico['correo_contacto']  ?></p>
                             <h5><img src="img/ico-tarjetas.jpg">FORMAS DE PAGO</h5>
-                            <p>
-                               
+                            <p>           
                                 <?php foreach($tarjetas as $tarjeta): ?>
                                 
                                     <img src=" <?php echo UP_IMG_PATH . $tarjeta['imagen'] ?>" width="50px">
                                     
                                 <?php endforeach; ?>
-
-                                
                             </p>
                             <h5><img src="img/ico-seguros.jpg">SEGUROS</h5>
                             <p>
@@ -261,7 +238,6 @@
                                     . " AND fecha_fin >= '" . date("Y/m/d") . "'" ;
                             $sitio = get_all_actived_inactived('registros', $where, 'id');  
                             
-
                             ?>
                             
                             <?php if(count($sitio)): ?>
@@ -271,8 +247,7 @@
                                 <input type="hidden" name="tipo"  value="medicos">
                                 <input type="hidden" name="id"  value="<?php echo $medico['id']  ?>">
                                 <input type="submit" class="btnminisitio" value="VER MINI SITIO">
-                                
-                                 
+                                      
                             </form>
                             
                             <?php   endif; ?>
@@ -286,14 +261,7 @@
                 <?php endif; ?>                
                 
                 <?php endforeach; ?>
-
-                <!--/////////////////////////////////////////////////////////////////////////////////////////-->
-                <!--/////////////////////////////////////////////////////////////////////////////////////////-->
-                <!--/////////////////////////////////////////////////////////////////////////////////////////-->
-                <!--/////////////////////////////////////////////////////////////////////////////////////////-->
-                
-
-                
+     
                 <?php foreach($hospitales as $key=>$hospital): ?>
 
                 <?php 
@@ -342,9 +310,7 @@
                     
                     $cuenta+=1;                                        
                 ?>
-                    
-
-                
+                                
                 <div class="ficha <?php echo ($cuenta % 2) ? '' : 'noborde' ; ?>">
                     <h4><?php echo replace($hospital['nombre'])  ?></h4>
                     <ul>
@@ -384,8 +350,6 @@
                                     </p>
                                 <?php   endif; ?>    
                                     
-                                    
-
                         </li>
                         <li>
                             <h5><img src="img/ico-mail.png"> CORREO ELECTRÓNICO</h5>
@@ -399,8 +363,6 @@
                                     
                                 <?php endforeach; ?>
                                 
-                                
-                                
                             </p>
                             <h5><img src="img/ico-seguros.jpg">SEGUROS</h5>
                             <p>
@@ -411,7 +373,6 @@
                                     
                                 <?php endforeach; ?>                                
 
- 
                             </p>
 
                             <?php 
@@ -422,7 +383,6 @@
                                     . " AND fecha_fin >= '" . date("Y/m/d") . "'" ;
                             $sitio = get_all_actived_inactived('registros', $where, 'id');  
                             
-
                             ?>
                             
                             <?php if(count($sitio)): ?>
@@ -432,7 +392,6 @@
                                 <input type="hidden" name="tipo"  value="hospitales">
                                 <input type="hidden" name="id"  value="<?php echo $hospital['id']  ?>">
                                 <input type="submit" class="btnminisitio" value="VER MINI SITIO">
-                                
                                  
                             </form>
                                                         
@@ -449,13 +408,7 @@
                 <?php endif ?>                
                 
                 <?php endforeach; ?>                                
-                
-                <!--/////////////////////////////////////////////////////////////////////////////////////////-->
-                <!--/////////////////////////////////////////////////////////////////////////////////////////-->
-                <!--/////////////////////////////////////////////////////////////////////////////////////////-->
-                <!--/////////////////////////////////////////////////////////////////////////////////////////-->
-
-                
+                                
                 <?php foreach($laboratorios as $key=>$laboratorio): ?>
 
                 <?php 
@@ -496,11 +449,9 @@
                     $seguros = get_sql($sql);   
                     
                     $cuenta+=1;
-                    
-                    
+                              
                 ?>
                     
-                
                 <div class="ficha <?php echo ($cuenta % 2) ? '' : 'noborde' ; ?>">
                     <h4><?php echo replace($laboratorio['nombre'])  ?></h4>
                     <ul>
@@ -559,7 +510,6 @@
                                     
                                 <?php endforeach; ?>                                
                                 
- 
                             </p>
 
                             <?php 
@@ -569,8 +519,7 @@
                                     . " AND fecha_inicio <= '" . date("Y/m/d") . "'"
                                     . " AND fecha_fin >= '" . date("Y/m/d") . "'" ;
                             $sitio = get_all_actived_inactived('registros', $where, 'id');  
-                            
-
+                        
                             ?>
                             
                             <?php if(count($sitio)): ?>
@@ -585,13 +534,11 @@
                             </form>
                             
                             <?php   endif; ?>
-                            
-                            
+                               
                         </li>
 
                     </ul>
                 </div>
-                
                 
                 <?php if(!($cuenta % 2)): ?>
                 <hr>
@@ -599,14 +546,7 @@
                 
                 
                 <?php endforeach; ?>                
-                
-                
-                <!--/////////////////////////////////////////////////////////////////////////////////////////-->
-                <!--/////////////////////////////////////////////////////////////////////////////////////////-->
-                <!--/////////////////////////////////////////////////////////////////////////////////////////-->
-                <!--/////////////////////////////////////////////////////////////////////////////////////////-->
-
-                
+                                               
                 <?php foreach($servicios as $key=>$servicio): ?>
 
                 <?php 
@@ -654,16 +594,13 @@
                     $seguros = get_sql($sql);   
                     
                     $cuenta+=1;
-                    
-                    
+                          
                 ?>
-                    
-                
+                      
                 <div class="ficha <?php echo ($cuenta % 2) ? '' : 'noborde' ; ?>">
                     <h4><?php echo replace($servicio['nombre'])  ?></h4>
                     <ul>
                         <li>
-                            
                             <h5><img src="img/ico-especialidad.png"> ESPECIALIDAD:</h5>
                             <p><?php echo replace($catalogo)   ?> </p>     
                             
@@ -688,8 +625,7 @@
                                               <?php  echo $servicio['fax_contacto'] ;  ?>
                                         </p>
                                     <?php   endif; ?>                                                                        
-                                        
-                                        
+                                              
                                 <?php if($servicio['horario']!=''): ?>                                                
                                     <h5><img src="img/ico-ubicacion.png"> HORARIO:</h5>
                                     <p>
@@ -709,8 +645,7 @@
                                     <img src=" <?php echo UP_IMG_PATH . $tarjeta['imagen'] ?>" width="50px">
                                     
                                 <?php endforeach; ?>                                
-                                
-                                
+                                   
                             </p>
                             <h5><img src="img/ico-seguros.jpg">SEGUROS</h5>
                             <p>
@@ -721,7 +656,6 @@
                                     
                                 <?php endforeach; ?>                                
                                 
- 
                             </p>
 
                             <?php 
@@ -731,8 +665,7 @@
                                     . " AND fecha_inicio <= '" . date("Y/m/d") . "'"
                                     . " AND fecha_fin >= '" . date("Y/m/d") . "'" ;
                             $sitio = get_all_actived_inactived('registros', $where, 'id');  
-                            
-
+                          
                             ?>
                             
                             <?php if(count($sitio)): ?>
@@ -742,13 +675,11 @@
                                 <input type="hidden" name="tipo"  value="servicios">
                                 <input type="hidden" name="id"  value="<?php echo $servicio['id']  ?>">
                                 <input type="submit" class="btnminisitio" value="VER MINI SITIO">
-                                
-                                 
+                                    
                             </form>
                             
                             <?php   endif; ?>
-                            
-                            
+                             
                         </li>
 
                     </ul>
@@ -760,13 +691,6 @@
                 
                 <?php endforeach; ?>                
                 
-                
-                <!--/////////////////////////////////////////////////////////////////////////////////////////-->
-                <!--/////////////////////////////////////////////////////////////////////////////////////////-->
-                <!--/////////////////////////////////////////////////////////////////////////////////////////-->
-                <!--/////////////////////////////////////////////////////////////////////////////////////////-->
-                
-
                 <?php foreach($proveedores as $key=>$proveedor): ?>
 
                 <?php 
@@ -814,11 +738,9 @@
                     $seguros = get_sql($sql);   
                     
                     $cuenta+=1;
-                    
-                    
+                          
                 ?>
-                    
-                
+                     
                 <div class="ficha <?php echo ($cuenta % 2) ? '' : 'noborde' ; ?>">
                     <h4><?php echo replace($proveedor['nombre'])  ?></h4>
                     <ul>
@@ -919,13 +841,7 @@
                 <?php endif ?>                
                 
                 <?php endforeach; ?>                
-                
-                
-                <!--/////////////////////////////////////////////////////////////////////////////////////////-->
-                <!--/////////////////////////////////////////////////////////////////////////////////////////-->
-                <!--/////////////////////////////////////////////////////////////////////////////////////////-->
-                <!--/////////////////////////////////////////////////////////////////////////////////////////-->                
-                
+                                             
                 </div>
             </div>
         </li>
@@ -933,10 +849,7 @@
     <div class="clear"></div>
 </section>
 
-
-
 <?php include('includes/footer.php'); ?>
-
 
 <!-- JQUERY -->
 <script src="js/vendor/jquery.cycle2.min.js"></script>

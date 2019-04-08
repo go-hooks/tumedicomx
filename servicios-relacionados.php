@@ -20,10 +20,9 @@
     $invasivo = get_one_sql($sql);       
 ?>
 
-<title>Tu Medico Laguna</title>
+<title>Tu Medico MX</title>
 </head>
 <body id="servicios">
-
 
     <?php if(! isset($_SESSION['servicios'])): ?>        
         
@@ -33,11 +32,9 @@
             <a href="<?php echo UP_IMG_PATH . $invasivo['imagen']  ?>" class="fancybox" id="promocion"></a>                
             
         <?php endif; ?>        
-            
-            
+                   
     <?php endif; ?> 
-            
-    
+             
 <?php include('includes/header.php'); ?>
 <section class="wrapper">
 
@@ -45,10 +42,8 @@
 
     <h2 class="colorazul">SELECCIONA LA CATEGORÍA DE TU INTERÉS:</h2>
 
-
 <?php foreach($catalogos as $catalogo): 
     
-
             $sql = " SELECT * FROM registros r"
                     . " INNER JOIN"
                     . " servicios s"
@@ -57,10 +52,8 @@
                     . " r.elim=0 AND r.autorizado=1"
                     . " AND categoria_id =" . $catalogo['id'];                    
 
-            $servicios = get_sql($sql);       
-    
+            $servicios = get_sql($sql);          
 ?>
-           
     
     <ul class="servicios ambulancias">
         <span class="mas">+</span>
@@ -68,17 +61,11 @@
         <li>
             <div class="resultados">
                 
-                    <!--//////////////////////////////////////////////////////////////////////////////////-->
-                    <!--//////////////////////////////////////////////////////////////////////////////////-->
-                    <!--//////////////////////////////////////////////////////////////////////////////////-->                
-                
-
                     <?php foreach($servicios as $key=>$servicio): ?>
 
                     <?php 
                         $estado='';
                         $municipio='';
-
 
                         if($servicio['categoria_id']!=''):
 
@@ -118,9 +105,7 @@
                                 . " registro_id = ". $servicio['id'] ;
 
                         $seguros = get_sql($sql);   
-
                     ?>
-
 
                     <div class="ficha <?php echo (($key+1) % 2) ? '' : 'noborde' ; ?>">
                         <h4><?php echo replace($servicio['nombre'])  ?></h4>
@@ -184,7 +169,6 @@
 
                                     <?php endforeach; ?>                                
 
-
                                 </p>
 
                                 <?php 
@@ -194,7 +178,6 @@
                                         . " AND fecha_inicio <= '" . date("Y/m/d") . "'"
                                         . " AND fecha_fin >= '" . date("Y/m/d") . "'" ;
                                 $sitio = get_all_actived_inactived('registros', $where, 'id');  
-
 
                                 ?>
 
@@ -206,12 +189,9 @@
                                     <input type="hidden" name="id"  value="<?php echo $servicio['id']  ?>">
                                     <input type="submit" class="btnminisitio" value="VER MINI SITIO">
 
-
                                 </form>
 
                                 <?php   endif; ?>
-
-
                             </li>
 
                         </ul>
@@ -221,13 +201,7 @@
                     <hr>
                     <?php endif ?>                
 
-                    <?php endforeach; ?>                              
-
-                
-                    <!--//////////////////////////////////////////////////////////////////////////////////-->
-                    <!--//////////////////////////////////////////////////////////////////////////////////-->
-                    <!--//////////////////////////////////////////////////////////////////////////////////-->                
-
+                    <?php endforeach; ?>                                            
             </div>
         </li>
     </ul>
@@ -237,10 +211,7 @@
     <div class="clear"></div>
 </section>
 
-
-
 <?php include('includes/footer.php'); ?>
-
 
 <!-- JQUERY -->
 <script src="js/vendor/jquery.cycle2.min.js"></script>

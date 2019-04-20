@@ -39,7 +39,8 @@
       <?php endif; ?> 
 
     </div>
-      
+    
+    
    <div class="col2" style="width: 38%; display:inline-block; vertical-align: top;">  
 
         <?php if(isset($_SESSION['usuario_id']) && is_numeric($_SESSION['usuario_id'])): ?>
@@ -79,7 +80,8 @@
                         }                                          
                  ?>                
                                  
-                 <?php else:                     
+                 <?php else:  
+                     
                      
                         switch ($_SESSION['usuario_tipo']) 
                         {
@@ -98,9 +100,13 @@
                           case "proveedor":
                             ?>  <li><a href="editar_perfil_proveedor.php">Mi Perfil</a></li> <?php  
                             break;                        
-                        }                                             
+                        }                        
+                     
+                     
+                     
                   ?>                                    
-                                        
+                    
+                    
                  <?php endif; ?>                
                  <?php endif; ?>                   
                     
@@ -113,6 +119,8 @@
     </div>
           
 </div>
+
+
 
 
 <div id="banner2">
@@ -131,5 +139,14 @@
         <!--<img src="img/banner01.jpg" >-->
         <!--<img src="img/banner01.jpg" >-->
         
-	</div>
+    </div>
 </div>
+
+<form id="zonabuscador" name="contacto"  method="post" action="resultados-busqueda.php">
+    
+    <input required="" id="buscador" type="text" name="buscar" placeholder="Busca en TuMédicoLaguna, ejemplo: Ginecólogo en Torreón.">
+    <input id="btnbuscador" type="submit" value="BUSCAR">        
+    
+
+    
+</form>

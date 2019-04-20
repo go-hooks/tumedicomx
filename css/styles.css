@@ -10,10 +10,10 @@ audio, canvas, video {
     *zoom: 1
 }
 
-    audio:not([controls]) {
-        display: none;
-        height: 0
-    }
+audio:not([controls]) {
+    display: none;
+    height: 0
+}
 
 [hidden] {
     display: none
@@ -103,8 +103,8 @@ p, pre {
 }
 
 code, kbd, pre, samp {
-    font-family: monospace,serif;
-    _font-family: 'courier new',monospace;
+    font-family: monospace, serif;
+    _font-family: 'courier new', monospace;
     font-size: 1em
 }
 
@@ -210,9 +210,9 @@ button, html input[type="button"], input[type="reset"], input[type="submit"] {
     *overflow: visible
 }
 
-    button[disabled], html input[disabled] {
-        cursor: default
-    }
+button[disabled], html input[disabled] {
+    cursor: default
+}
 
 input[type="checkbox"], input[type="radio"] {
     box-sizing: border-box;
@@ -228,9 +228,9 @@ input[type="search"] {
     box-sizing: content-box
 }
 
-    input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
-        -webkit-appearance: none
-    }
+input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none
+}
 
 button::-moz-focus-inner, input::-moz-focus-inner {
     border: 0;
@@ -248,7 +248,7 @@ table {
 }
 
 html, button, input, select, textarea {
-    color: #262626
+    color: #222
 }
 
 body {
@@ -509,12 +509,12 @@ dl {
     *text-indent: -9999px
 }
 
-    .ir:before {
-        content: "";
-        display: block;
-        width: 0;
-        height: 150%
-    }
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%
+}
 
 .hidden {
     display: none !important;
@@ -532,14 +532,14 @@ dl {
     width: 1px
 }
 
-    .visuallyhidden.focusable:active, .visuallyhidden.focusable:focus {
-        clip: auto;
-        height: auto;
-        margin: 0;
-        overflow: visible;
-        position: static;
-        width: auto
-    }
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto
+}
 
 .invisible {
     visibility: hidden
@@ -677,9 +677,9 @@ dl {
 }
 
 .btn:active, .btn.active {
-    -webkit-box-shadow: inset 0 0 8px rgba(0,0,0,0.5);
-    -moz-box-shadow: inset 0 0 8px rgba(0,0,0,0.5);
-    box-shadow: inset 0 0 8px rgba(0,0,0,0.5);
+    -webkit-box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.5);
     behavior: url('plugins/css3pie/PIE.htc')
 }
 
@@ -702,25 +702,23 @@ dl {
     border: none
 }
 
-    .btn.btn-link:hover {
-        text-decoration: underline
-    }
+.btn.btn-link:hover {
+    text-decoration: underline
+}
 
 .btn.btn-block {
     display: block
 }
 
 body {
-    font-family: 'Raleway','sans-serif';
-    font-size: 12px;
+    font-family: 'Raleway', 'sans-serif';
+    font-size: 14px;
     color: #505050;
-    /*background: url(../img/bk-home.jpg) no-repeat center 100px;*/
-    background: #FCFEFF
+    background: url(../img/bk-home.jpg) no-repeat center 211px
 }
 
 #loading {
-    /*background: url(../img/Loading/fondo.jpg) no-repeat fixed center;*/
-    background: #262626;
+    background: url(../img/Loading/fondo.jpg) no-repeat fixed center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -809,230 +807,146 @@ body {
 
 header {
     width: 100%;
-    min-width: 1200px;
-    height: 90px;
-    color: #FFF;
+    min-width: 960px;
+    height: 215px;
+    color: #fff;
     position: relative;
     z-index: 2;
-    background: #262626;
-    /*border-bottom: #1A598A solid 10px;*/
-    /*background: url(../img/bk-header.jpg) no-repeat right top*/
+    background: url(../img/bk-header.jpg) no-repeat right top
 }
 
-    header .wrapper {
-        height: 100%;      
-    }
+header .wrapper {
+    height: 100%
+}
 
-        header .wrapper .fecha {
-            height: 100px;
-            margin: 0px 0 0 120px;
-            padding: 30px 0 0 60px;
-            float: left;
-            font-size: 16px
-            /*border-left: 1px solid #5969F0 */
-        }
+header .wrapper .fecha {
+    height: 100px;
+    margin: 20px 0 0 290px;
+    padding: 20px 0 0 30px;
+    float: left;
+    font-size: 14px;
+    border-left: 1px solid #fff
+}
 
-        header .wrapper #zonabuscador2 {
-            height: 100px;
-            margin: 0px 0 0 400px;
-            padding: 25px 0 0 0;
-            float: left;
-            font-size: 16px; 
-  
-            /*border-left: 1px solid #5969F0 */
-        }
+header .wrapper #logo {
+    position: absolute;
+    top: 0;
+    left: 0
+}
 
-    header #zonabuscador2 #buscador {
-        width: 200px;
-        height: 35px;
-        box-sizing: border-box;
-        /*border: 5px solid #4EE3AF;*/
-        border-radius: 0px;
-        font-size: 14px;
-        background-color: #FFF;
-        background-position: 20px 10px;
-        margin-top: 1px;
-        padding: 12px 20px 12px 25px;
-        /*-webkit-transition: width 0.4s ease-in-out;
-        transition: width 0.4s ease-in-out;*/
-        float: left;
-        border: 0;
-        /*background: url(../img/bk-buscador.png) no-repeat*/
-    }
+header .wrapper nav {
+    position: absolute;
+    bottom: 0
+}
 
-                header #zonabuscador2 #buscador:focus {
-                    width: 100%;
-                }
+header .wrapper nav ul {
+    width: 100%;
+    height: 100%;
+    line-height: 60px
+}
 
-    header #zonabuscador2 #btnbuscador {
-        width: 60px;
-        height: 35px;
-        font-size: 20px;
-        font-weight: 500;
-        /*text-shadow: 1px 1px 1px #fff;*/
-        float: left;
-        border: 0;
-        border-radius: 0;
-        /*background: url(../img/bk-btnbuscador.png) no-repeat*/
-        background-color: #4EE3AF;
-        color: white;
-        border: 1px solid grey;
-        border-left: none;
-        cursor: pointer;
-    }
+header .wrapper nav ul li {
+    float: left;
+    padding: 0 0 0 30px;
+    text-shadow: 0 1px 0 #333;
+    font-size: 14px
+}
 
-                        header #zonabuscador2 > p {
-                            width: 240px;
-                            padding: 0 20px;
-                            text-align: center;
-                            margin: 0;
-                            height: 100%;
-                            line-height: 50px;
-                            float: right
-                        }
+header .wrapper nav ul li a {
+    color: #fff;
+    font-weight: bold
+}
 
-        header .wrapper #logo {
-            position: absolute;
-            top: -20px;
-            left: 0
-        }
+header .wrapper nav ul li a:hover {
+    text-decoration: underline
+}
 
-    header .navigation row {
-        height: 100px;
-        background-color: #4EE3AF
-    }
-
-        header .navigation row nav {
-            position: absolute;
-            bottom: 0
-        }
-
-            header .navigation row nav ul {
-                width: 100%;
-                height: 100%;
-                line-height: 60px
-            }
-
-                header .navigation row nav ul li {
-                    float: left;
-                    padding: 0 0 0 50px;
-                    /*text-shadow: 0 1px 0 #333;*/
-                    font-size: 16px
-                }
-
-                    header .navigation row nav ul li a {
-                        color: hsl(0,0%,100%);
-                        opacity: 0.6;
-                        font-weight: 500;
-                    }
-
-        header .navigation nav ul li a:hover {
-            /*text-decoration: underline*/
-            color: hsl(0,0%,100%);
-            opacity: 1;
-        }
-
-                    header .navigation row nav ul li:first-child {
-                        padding: 0
-                    }
-
+header .wrapper nav ul li:first-child {
+    padding: 0
+}
 
 section #zonaperfil {
-    height: 5px
+    height: 65px
 }
 
-    section #zonaperfil ul {
-        width: 280px;
-        height: 25px;
-        margin-top: 20px;
-        line-height: 25px;
-        float: right
-    }
+section #zonaperfil ul {
+    width: 280px;
+    height: 25px;
+    margin-top: 20px;
+    line-height: 25px;
+    float: right
+}
 
-        section #zonaperfil ul li {
-            padding: 0 15px;
-            border-left: 1px solid #00b1e0;
-            color: #00b1e0;
-            float: left
-        }
+section #zonaperfil ul li {
+    padding: 0 15px;
+    border-left: 1px solid #00b1e0;
+    color: #00b1e0;
+    float: left
+}
 
-            section #zonaperfil ul li img {
-                margin: -3px 10px 0 0
-            }
+section #zonaperfil ul li img {
+    margin: -3px 10px 0 0
+}
 
-            section #zonaperfil ul li:first-child {
-                border-left: 0
-            }
+section #zonaperfil ul li:first-child {
+    border-left: 0
+}
 
-    section #zonaperfil > p {
-        float: right;
-        margin-top: 20px;
-        padding: 5px 12px;
-        font-family: 'Roboto','sans-serif';
-        font-weight: 300
-    }
+section #zonaperfil>p {
+    float: right;
+    margin-top: 20px;
+    padding: 5px 12px;
+    font-family: 'Roboto', 'sans-serif';
+    font-weight: 300
+}
 
 section #zonabuscador {
     height: 63px;
     margin: 20px 0
 }
 
-    section #zonabuscador #buscador {
-        width: 270px;
-        height: 40px;
-        box-sizing: border-box;
-        border: 5px solid #262626;
-        border-radius: 20px;
-        font-size: 16px;
-        background-color: #262626;
-        background-position: 20px 10px;
-        margin-top: 1px;
-        padding: 12px 20px 12px 35px;
-        -webkit-transition: width 0.4s ease-in-out;
-        transition: width 0.4s ease-in-out;
-        float: left;
-        border: 0;
-        /*background: url(../img/bk-buscador.png) no-repeat*/
-    }
+section #zonabuscador #buscador {
+    width: 600px;
+    height: 63px;
+    margin-top: 1px;
+    padding: 10px 0 28px 50px;
+    float: left;
+    border: 0;
+    background: url(../img/bk-buscador.png) no-repeat
+}
 
-    section #zonabuscador #buscador:focus {
-        width: 50%;
-    }
+section #zonabuscador #btnbuscador {
+    width: 120px;
+    height: 54px;
+    color: #065368;
+    font-size: 18px;
+    font-weight: 800;
+    text-shadow: 1px 1px 1px #fff;
+    float: left;
+    border: 0;
+    background: url(../img/bk-btnbuscador.png) no-repeat
+}
 
-    section #zonabuscador #btnbuscador {
-        width: 90px;
-        height: 40px;
-        color: #FFFFFF;
-        font-size: 18px;
-        font-weight: 500;
-        /*text-shadow: 1px 1px 1px #fff;*/
-        float: left;
-        border: 0;
-        border-radius: 12px;
-        /*background: url(../img/bk-btnbuscador.png) no-repeat*/
-        background-color: #262626
-    }
-
-    section #zonabuscador > p {
-        width: 240px;
-        padding: 0 20px;
-        text-align: center;
-        margin: 0;
-        height: 100%;
-        line-height: 50px;
-        float: right
-    }
+section #zonabuscador>p {
+    width: 240px;
+    padding: 0 20px;
+    text-align: center;
+    margin: 0;
+    height: 100%;
+    line-height: 50px;
+    float: right
+}
 
 section .colizq {
-    width: 550px;
+    width: 480px;
     margin-left: 5px;
     float: left
 }
 
 section .colder {
-    width: 550px;
+    width: 415px;
     max-height: 800px;
-    margin-right: 60px;
+    margin-right: 5px;
     float: right
 }
 
@@ -1044,10 +958,10 @@ section .alfabeto {
     border-bottom: 1px #00b1e0 solid
 }
 
-    section .alfabeto li {
-        padding: 0 12px;
-        float: left
-    }
+section .alfabeto li {
+    padding: 0 12px;
+    float: left
+}
 
 section h3.esp {
     width: 50%;
@@ -1064,29 +978,29 @@ section h3.esp {
     color: #fff
 }
 
-    #prepie .wrapper, #prepie2 .wrapper {
-        padding-left: 500px
-    }
+#prepie .wrapper, #prepie2 .wrapper {
+    padding-left: 500px
+}
 
-    #prepie h2, #prepie2 h2 {
-        font-size: 40px !important;
-        line-height: 25px;
-        margin: 20px 0;
-        color: #fff !important
-    }
+#prepie h2, #prepie2 h2 {
+    font-size: 40px !important;
+    line-height: 25px;
+    margin: 20px 0;
+    color: #fff !important
+}
 
-        #prepie h2 span, #prepie2 h2 span {
-            font-size: 20px;
-            color: #fff !important
-        }
+#prepie h2 span, #prepie2 h2 span {
+    font-size: 20px;
+    color: #fff !important
+}
 
-    #prepie li, #prepie2 li {
-        line-height: 25px;
-        font-size: 17px;
-        margin-bottom: 14px;
-        padding-left: 25px;
-        background: url(../img/vineta-prepie.png) no-repeat left 6px
-    }
+#prepie li, #prepie2 li {
+    line-height: 25px;
+    font-size: 17px;
+    margin-bottom: 14px;
+    padding-left: 25px;
+    background: url(../img/vineta-prepie.png) no-repeat left 6px
+}
 
 #prepie2 {
     height: 490px;
@@ -1095,50 +1009,46 @@ section h3.esp {
 }
 
 footer {
-    min-width: 1200px;
+    min-width: 960px;
     padding-top: 20px;
-    background: #262626;
-    /*background: url(../img/bk-footer.jpg) center top;*/
-    /*border-top: #6FB9F3 solid 10px;*/
-    /*border-bottom: #6FB9F3 solid 10px;*/
-    color: #fff;
+    background: url(../img/bk-footer.jpg) center top;
+    border-top: #057c9c solid 8px;
+    color: #fff
 }
 
-    footer ul {
-        min-width: 300px;
-        padding-left: 30px
-    }
+footer ul {
+    min-width: 300px;
+    padding-left: 30px
+}
 
-        footer ul li {
-            font-weight: 300;
-            padding: 5px 0
-        }
+footer ul li {
+    font-weight: 300;
+    padding: 5px 0
+}
 
-            footer ul li img {
-                margin-right: 10px
-            }
+footer ul li img {
+    margin-right: 10px
+}
 
-            footer ul li span {
-                font-size: 20px;
-                font-weight: bold
-            }
+footer ul li span {
+    font-size: 20px;
+    font-weight: bold
+}
 
-    footer .copyright {
-        width: 100%;
-        height: 78px;
-        color: #FFF;
-        font-size: 12px;
-        font-weight: 100;
-        margin-top: 40px;
-        /*border-top: 1px solid #18b7e2;*/
-        background-color: #5B5A5A;
-        font-family: 'Roboto','sans-serif'
-    }
+footer .copyright {
+    width: 100%;
+    height: 78px;
+    color: #00717c;
+    font-size: 12px;
+    font-weight: 100;
+    margin-top: 40px;
+    border-top: 1px solid #18b7e2;
+    background-color: #e3e3e3;
+    font-family: 'Roboto', 'sans-serif'
+}
 
-        footer .copyright a {
-            /*text-decoration: underline*/
-    color: hsl(0,0%,100%);
-    opacity: 1;
+footer .copyright a {
+    text-decoration: underline
 }
 
 #home #zonaregistro {
@@ -1147,87 +1057,87 @@ footer {
     position: relative
 }
 
-    #home #zonaregistro .ingresar {
-        width: 50%;
-        height: 300px;
-        padding: 10px 20px;
-        display: none;
-        top: 45px;
-        z-index: 900;
-        box-shadow: 0 0 8px #000 inset;
-        border-radius: 3px;
-        border: 2px solid #262626;
-        text-align: left;
-        background-color: #F9F9F9;
-        position: absolute
-    }
+#home #zonaregistro .ingresar {
+    width: 100%;
+    height: 350px;
+    padding: 20px 30px;
+    display: none;
+    top: 45px;
+    z-index: 900;
+    box-shadow: 0 0 8px #000 inset;
+    border-radius: 3px;
+    border: 2px solid #00717c;
+    text-align: left;
+    background-color: #f2f2f2;
+    position: absolute
+}
 
-        #home #zonaregistro .ingresar .close {
-            position: absolute;
-            top: 5px;
-            right: 5px
-        }
+#home #zonaregistro .ingresar .close {
+    position: absolute;
+    top: 5px;
+    right: 5px
+}
 
-        #home #zonaregistro .ingresar h2 {
-            padding-bottom: 10px;
-            border-bottom: 1px #888 solid;
-            text-align: center;
-            color: #00717c
-        }
+#home #zonaregistro .ingresar h2 {
+    padding-bottom: 10px;
+    border-bottom: 1px #888 solid;
+    text-align: center;
+    color: #00717c
+}
 
-        #home #zonaregistro .ingresar .txt {
-            width: 90%;
-            margin: 10px 0 15px 0
-        }
+#home #zonaregistro .ingresar .txt {
+    width: 100%;
+    margin: 10px 0 15px 0
+}
 
 #home .colizq {
     overflow: hidden
 }
 
-    #home .colizq .ocultar {
-        position: relative;
-        height: 1480px
-    }
+#home .colizq .ocultar {
+    position: relative;
+    height: 1480px
+}
 
 #home .catalogopestanas {
     width: auto;
     height: 50px;
-    color: #262626
+    color: #00b1e0
 }
 
-    #home .catalogopestanas li {
-        height: 44px;
-        padding: 0 20px;
-        line-height: 44px;
-        margin: 6px 4px 0 0;
-        opacity: .4;
-        background-color: #f2f2f2;
-        border: 1px #808080 solid;
-        border-bottom: 0;
-        float: left
-    }
+#home .catalogopestanas li {
+    height: 44px;
+    padding: 0 20px;
+    line-height: 44px;
+    margin: 6px 4px 0 0;
+    opacity: .4;
+    background-color: #f2f2f2;
+    border: 1px #808080 solid;
+    border-bottom: 0;
+    float: left
+}
 
-        #home .catalogopestanas li img {
-            margin: -5px 5px 0 0
-        }
+#home .catalogopestanas li img {
+    margin: -5px 5px 0 0
+}
 
-        #home .catalogopestanas li.activo {
-            height: 50px;
-            margin-top: 1px;
-            border-color: #262626;
-            background-color: #fff;
-            opacity: 1
-        }
+#home .catalogopestanas li.activo {
+    height: 50px;
+    margin-top: 1px;
+    border-color: #00b1e0;
+    background-color: #fff;
+    opacity: 1
+}
 
-        #home .catalogopestanas li:last-child {
-            margin-right: 0;
-            float: right
-        }
+#home .catalogopestanas li:last-child {
+    margin-right: 0;
+    float: right
+}
 
 #home .catalogo {
     width: 100%;
     padding: 20px;
-    border: 1px #262626 solid;
+    border: 1px #00b1e0 solid;
     position: absolute;
     top: 0;
     left: -100%;
@@ -1235,25 +1145,25 @@ footer {
     min-height: 1300px
 }
 
-    #home .catalogo .catalogocontrols {
-        text-align: center
-    }
+#home .catalogo .catalogocontrols {
+    text-align: center
+}
 
-        #home .catalogo .catalogocontrols img {
-            margin: 20px 40px
-        }
+#home .catalogo .catalogocontrols img {
+    margin: 20px 40px
+}
 
-    #home .catalogo .ficha {
-        height: 420px
-    }
+#home .catalogo .ficha {
+    height: 420px
+}
 
-        #home .catalogo .ficha h4 {
-            margin-bottom: 15px
-        }
+#home .catalogo .ficha h4 {
+    margin-bottom: 15px
+}
 
-    #home .catalogo.activo {
-        left: 0
-    }
+#home .catalogo.activo {
+    left: 0
+}
 
 #home .redes {
     width: 420px;
@@ -1261,23 +1171,23 @@ footer {
     text-align: center
 }
 
-    #home .redes img {
-        margin-top: 0
-    }
+#home .redes img {
+    margin-top: 0
+}
 
-        #home .redes img.medio {
-            margin: 0 40px 0 40px
-        }
+#home .redes img.medio {
+    margin: 0 40px 0 40px
+}
 
 #medicos h2 {
-    color: #262626;
+    color: #00b1e0;
     font-weight: normal;
     padding-left: 30px;
     font-size: 18px
 }
 
 #hospitales h2 {
-    color: #262626;
+    color: #00b1e0;
     padding-left: 30px;
     font-size: 18px
 }
@@ -1288,13 +1198,13 @@ footer {
     min-height: 340px;
     display: inline-block;
     border: 0;
-    border-right: 1px #262626 solid;
+    border-right: 1px #00b1e0 solid;
     border-color: inherit
 }
 
-    #hospitales .ficha.noborde {
-        border: 0
-    }
+#hospitales .ficha.noborde {
+    border: 0
+}
 
 #hospitales .hospitales {
     height: 50px;
@@ -1303,99 +1213,99 @@ footer {
     position: relative
 }
 
-    #hospitales .hospitales .mas {
-        font-size: 80px;
-        line-height: 50px;
-        position: absolute;
-        top: 0;
-        right: 10px
-    }
+#hospitales .hospitales .mas {
+    font-size: 80px;
+    line-height: 50px;
+    position: absolute;
+    top: 0;
+    right: 10px
+}
 
-    #hospitales .hospitales h2 {
-        width: 100%;
-        height: 50px;
-        line-height: 50px;
-        padding-left: 20px;
-        color: inherit;
-        border: solid 1px #0f5364;
-        border-color: inherit;
-        font-weight: 500;
-        margin: 0;
-        margin-bottom: 2px;
-        background-color: #fff
-    }
+#hospitales .hospitales h2 {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    padding-left: 20px;
+    color: inherit;
+    border: solid 1px #0f5364;
+    border-color: inherit;
+    font-weight: 500;
+    margin: 0;
+    margin-bottom: 2px;
+    background-color: #fff
+}
 
-    #hospitales .hospitales > li {
-        height: 40px;
-        overflow: hidden;
-        margin-bottom: 2px
-    }
+#hospitales .hospitales>li {
+    height: 40px;
+    overflow: hidden;
+    margin-bottom: 2px
+}
 
-        #hospitales .hospitales > li h2 {
-            height: 40px;
-            line-height: 40px;
-            padding-left: 45px
-        }
+#hospitales .hospitales>li h2 {
+    height: 40px;
+    line-height: 40px;
+    padding-left: 45px
+}
 
-        #hospitales .hospitales > li .resultados {
-            width: 100%;
-            height: auto;
-            padding: 30px 20px;
-            border: 1px solid #0f5364;
-            border-color: inherit
-        }
+#hospitales .hospitales>li .resultados {
+    width: 100%;
+    height: auto;
+    padding: 30px 20px;
+    border: 1px solid #0f5364;
+    border-color: inherit
+}
 
-    #hospitales .hospitales hr {
-        border-color: inherit
-    }
+#hospitales .hospitales hr {
+    border-color: inherit
+}
 
-    #hospitales .hospitales.asilos {
-        color: #0f5364;
-        border-color: #0f5364
-    }
+#hospitales .hospitales.asilos {
+    color: #0f5364;
+    border-color: #0f5364
+}
 
-    #hospitales .hospitales.veterinarios {
-        color: #14728b;
-        border-color: #14728b
-    }
+#hospitales .hospitales.veterinarios {
+    color: #14728b;
+    border-color: #14728b
+}
 
-    #hospitales .hospitales.privados {
-        color: #1b93b2;
-        border-color: #1b93b2
-    }
+#hospitales .hospitales.privados {
+    color: #1b93b2;
+    border-color: #1b93b2
+}
 
-    #hospitales .hospitales.clinicas {
-        color: #262626;
-        border-color: #262626
-    }
+#hospitales .hospitales.clinicas {
+    color: #23bce4;
+    border-color: #23bce4
+}
 
-    #hospitales .hospitales.asilos.activo > h2 {
-        background-color: #0f5364
-    }
+#hospitales .hospitales.asilos.activo>h2 {
+    background-color: #0f5364
+}
 
-    #hospitales .hospitales.veterinarios.activo > h2 {
-        background-color: #14728b
-    }
+#hospitales .hospitales.veterinarios.activo>h2 {
+    background-color: #14728b
+}
 
-    #hospitales .hospitales.privados.activo > h2 {
-        background-color: #1b93b2
-    }
+#hospitales .hospitales.privados.activo>h2 {
+    background-color: #1b93b2
+}
 
-    #hospitales .hospitales.clinicas.activo > h2 {
-        background-color: #262626
-    }
+#hospitales .hospitales.clinicas.activo>h2 {
+    background-color: #23bce4
+}
 
-    #hospitales .hospitales.activo {
-        height: auto
-    }
+#hospitales .hospitales.activo {
+    height: auto
+}
 
-        #hospitales .hospitales.activo > h2 {
-            color: #fff
-        }
+#hospitales .hospitales.activo>h2 {
+    color: #fff
+}
 
-        #hospitales .hospitales.activo .mas {
-            color: #fff
-        }
+#hospitales .hospitales.activo .mas {
+    color: #fff
+}
 
 #hospitales li.activo {
     height: auto
@@ -1417,9 +1327,9 @@ footer {
     border-color: inherit
 }
 
-    #servicios .ficha.noborde {
-        border: 0
-    }
+#servicios .ficha.noborde {
+    border: 0
+}
 
 #servicios .servicios {
     height: 50px;
@@ -1428,78 +1338,78 @@ footer {
     position: relative
 }
 
-    #servicios .servicios .mas {
-        font-size: 80px;
-        line-height: 50px;
-        position: absolute;
-        top: 0;
-        right: 10px
-    }
+#servicios .servicios .mas {
+    font-size: 80px;
+    line-height: 50px;
+    position: absolute;
+    top: 0;
+    right: 10px
+}
 
-    #servicios .servicios h2 {
-        width: 100%;
-        height: 50px;
-        line-height: 50px;
-        padding-left: 20px;
-        color: inherit;
-        border: solid 1px #0f5364;
-        border-color: inherit;
-        font-weight: 500;
-        margin: 0;
-        margin-bottom: 2px;
-        background-color: #fff
-    }
+#servicios .servicios h2 {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    padding-left: 20px;
+    color: inherit;
+    border: solid 1px #0f5364;
+    border-color: inherit;
+    font-weight: 500;
+    margin: 0;
+    margin-bottom: 2px;
+    background-color: #fff
+}
 
-    #servicios .servicios li {
-        height: 40px;
-        overflow: hidden;
-        margin-bottom: 2px
-    }
+#servicios .servicios li {
+    height: 40px;
+    overflow: hidden;
+    margin-bottom: 2px
+}
 
-        #servicios .servicios li .resultados {
-            width: 100%;
-            height: auto;
-            padding: 30px 20px;
-            border: 1px solid #0f5364;
-            border-color: inherit
-        }
+#servicios .servicios li .resultados {
+    width: 100%;
+    height: auto;
+    padding: 30px 20px;
+    border: 1px solid #0f5364;
+    border-color: inherit
+}
 
-    #servicios .servicios hr {
-        border-color: inherit
-    }
+#servicios .servicios hr {
+    border-color: inherit
+}
 
-    #servicios .servicios.ambulancias {
-        color: #0f5364;
-        border-color: #0f5364
-    }
+#servicios .servicios.ambulancias {
+    color: #0f5364;
+    border-color: #0f5364
+}
 
-    #servicios .servicios.alternativa {
-        color: #14728b;
-        border-color: #14728b
-    }
+#servicios .servicios.alternativa {
+    color: #14728b;
+    border-color: #14728b
+}
 
-    #servicios .servicios.opticas {
-        color: #1b93b2;
-        border-color: #1b93b2
-    }
+#servicios .servicios.opticas {
+    color: #1b93b2;
+    border-color: #1b93b2
+}
 
-    #servicios .servicios.aseguradoras {
-        color: #23bce4;
-        border-color: #23bce4
-    }
+#servicios .servicios.aseguradoras {
+    color: #23bce4;
+    border-color: #23bce4
+}
 
-    #servicios .servicios.preventiva {
-        color: #27d2ff;
-        border-color: #27d2ff
-    }
+#servicios .servicios.preventiva {
+    color: #27d2ff;
+    border-color: #27d2ff
+}
 
-    #servicios .servicios.activo {
-        height: auto
-    }
+#servicios .servicios.activo {
+    height: auto
+}
 
-        #servicios .servicios.activo li {
-            height: auto
-        }
+#servicios .servicios.activo li {
+    height: auto
+}
 
 #laboratorios .ficha {
     width: 49%;
@@ -1511,42 +1421,42 @@ footer {
     border-color: inherit
 }
 
-    #laboratorios .ficha.noborde {
-        border: 0
-    }
+#laboratorios .ficha.noborde {
+    border: 0
+}
 
 #laboratorios .laboratorios {
     height: auto;
     position: relative
 }
 
-    #laboratorios .laboratorios h2 {
-        width: 100%;
-        height: 50px;
-        line-height: 50px;
-        padding-left: 20px;
-        color: #23bce4;
-        border: solid 1px #23bce4;
-        font-weight: 500;
-        margin: 0;
-        margin-bottom: 2px;
-        background-color: #fff
-    }
+#laboratorios .laboratorios h2 {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    padding-left: 20px;
+    color: #23bce4;
+    border: solid 1px #23bce4;
+    font-weight: 500;
+    margin: 0;
+    margin-bottom: 2px;
+    background-color: #fff
+}
 
-    #laboratorios .laboratorios li {
-        height: auto
-    }
+#laboratorios .laboratorios li {
+    height: auto
+}
 
-        #laboratorios .laboratorios li .resultados {
-            width: 100%;
-            height: auto;
-            padding: 30px 20px;
-            border: 1px solid #23bce4
-        }
+#laboratorios .laboratorios li .resultados {
+    width: 100%;
+    height: auto;
+    padding: 30px 20px;
+    border: 1px solid #23bce4
+}
 
-    #laboratorios .laboratorios hr {
-        border-color: #23bce4
-    }
+#laboratorios .laboratorios hr {
+    border-color: #23bce4
+}
 
 #proveedores h2 {
     color: #00b1e0;
@@ -1564,9 +1474,9 @@ footer {
     border-color: inherit
 }
 
-    #proveedores .ficha.noborde {
-        border: 0
-    }
+#proveedores .ficha.noborde {
+    border: 0
+}
 
 #proveedores .proveedores {
     height: 50px;
@@ -1575,80 +1485,80 @@ footer {
     position: relative
 }
 
-    #proveedores .proveedores .mas {
-        font-size: 80px;
-        line-height: 50px;
-        position: absolute;
-        top: 0;
-        right: 10px
-    }
+#proveedores .proveedores .mas {
+    font-size: 80px;
+    line-height: 50px;
+    position: absolute;
+    top: 0;
+    right: 10px
+}
 
-    #proveedores .proveedores h2 {
-        width: 100%;
-        height: 50px;
-        line-height: 50px;
-        padding-left: 20px;
-        color: inherit;
-        border: solid 1px #0f5364;
-        border-color: inherit;
-        font-weight: 500;
-        margin: 0;
-        margin-bottom: 2px;
-        background-color: #fff
-    }
+#proveedores .proveedores h2 {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    padding-left: 20px;
+    color: inherit;
+    border: solid 1px #0f5364;
+    border-color: inherit;
+    font-weight: 500;
+    margin: 0;
+    margin-bottom: 2px;
+    background-color: #fff
+}
 
-    #proveedores .proveedores li {
-        height: 40px;
-        overflow: hidden;
-        margin-bottom: 2px
-    }
+#proveedores .proveedores li {
+    height: 40px;
+    overflow: hidden;
+    margin-bottom: 2px
+}
 
-        #proveedores .proveedores li .resultados {
-            width: 100%;
-            height: auto;
-            padding: 30px 20px;
-            border: 1px solid #0f5364;
-            border-color: inherit
-        }
+#proveedores .proveedores li .resultados {
+    width: 100%;
+    height: auto;
+    padding: 30px 20px;
+    border: 1px solid #0f5364;
+    border-color: inherit
+}
 
-    #proveedores .proveedores hr {
-        border-color: inherit
-    }
+#proveedores .proveedores hr {
+    border-color: inherit
+}
 
-    #proveedores .proveedores.equipo {
-        color: #0f5364;
-        border-color: #0f5364
-    }
+#proveedores .proveedores.equipo {
+    color: #0f5364;
+    border-color: #0f5364
+}
 
-    #proveedores .proveedores.sordera {
-        color: #14728b;
-        border-color: #14728b
-    }
+#proveedores .proveedores.sordera {
+    color: #14728b;
+    border-color: #14728b
+}
 
-    #proveedores .proveedores.dentales {
-        color: #1b93b2;
-        border-color: #1b93b2
-    }
+#proveedores .proveedores.dentales {
+    color: #1b93b2;
+    border-color: #1b93b2
+}
 
-    #proveedores .proveedores.curacion {
-        color: #23bce4;
-        border-color: #23bce4
-    }
+#proveedores .proveedores.curacion {
+    color: #23bce4;
+    border-color: #23bce4
+}
 
-    #proveedores .proveedores.medicamentos {
-        color: #27d2ff;
-        border-color: #27d2ff
-    }
+#proveedores .proveedores.medicamentos {
+    color: #27d2ff;
+    border-color: #27d2ff
+}
 
-    #proveedores .proveedores.activo {
-        height: auto
-    }
+#proveedores .proveedores.activo {
+    height: auto
+}
 
-        #proveedores .proveedores.activo li {
-            height: auto
-        }
+#proveedores .proveedores.activo li {
+    height: auto
+}
 
-#empresa section.wrapper > p {
+#empresa section.wrapper>p {
     line-height: 35px;
     font-weight: 300
 }
@@ -1658,20 +1568,20 @@ footer {
     margin: 40px 0
 }
 
-#empresa section.wrapper > ul {
+#empresa section.wrapper>ul {
     width: 100%;
     height: 150px;
     padding: 40px 0;
-    font-family: 'Roboto','sans-serif';
+    font-family: 'Roboto', 'sans-serif';
     font-weight: bold
 }
 
-    #empresa section.wrapper > ul li {
-        width: 33%;
-        height: 100%;
-        padding: 0 30px;
-        float: left
-    }
+#empresa section.wrapper>ul li {
+    width: 33%;
+    height: 100%;
+    padding: 0 30px;
+    float: left
+}
 
 #empresa section.wrapper .btnpreguntas {
     margin: 0 15px
@@ -1687,42 +1597,42 @@ footer {
     border-color: inherit
 }
 
-    #laboratorios .ficha.noborde {
-        border: 0
-    }
+#laboratorios .ficha.noborde {
+    border: 0
+}
 
 #laboratorios .laboratorios {
     height: auto;
     position: relative
 }
 
-    #laboratorios .laboratorios h2 {
-        width: 100%;
-        height: 50px;
-        line-height: 50px;
-        padding-left: 20px;
-        color: #23bce4;
-        border: solid 1px #23bce4;
-        font-weight: 500;
-        margin: 0;
-        margin-bottom: 2px;
-        background-color: #fff
-    }
+#laboratorios .laboratorios h2 {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    padding-left: 20px;
+    color: #23bce4;
+    border: solid 1px #23bce4;
+    font-weight: 500;
+    margin: 0;
+    margin-bottom: 2px;
+    background-color: #fff
+}
 
-    #laboratorios .laboratorios li {
-        height: auto
-    }
+#laboratorios .laboratorios li {
+    height: auto
+}
 
-        #laboratorios .laboratorios li .resultados {
-            width: 100%;
-            height: auto;
-            padding: 30px 20px;
-            border: 1px solid #23bce4
-        }
+#laboratorios .laboratorios li .resultados {
+    width: 100%;
+    height: auto;
+    padding: 30px 20px;
+    border: 1px solid #23bce4
+}
 
-    #laboratorios .laboratorios hr {
-        border-color: #23bce4
-    }
+#laboratorios .laboratorios hr {
+    border-color: #23bce4
+}
 
 #minisitio #banner2 {
     display: none
@@ -1739,18 +1649,18 @@ footer {
     padding: 10px 30px
 }
 
-    #minisitio .ficha h4 {
-        font-size: 16px
-    }
+#minisitio .ficha h4 {
+    font-size: 16px
+}
 
-    #minisitio .ficha li {
-        width: 100%;
-        float: none
-    }
+#minisitio .ficha li {
+    width: 100%;
+    float: none
+}
 
-    #minisitio .ficha.web {
-        height: 130px
-    }
+#minisitio .ficha.web {
+    height: 130px
+}
 
 #minisitio .minisitiologo {
     width: 400px;
@@ -1771,18 +1681,18 @@ footer {
     padding: 20px
 }
 
-    #minisitio form.bordeazul .txt {
-        margin: 0 20px 20px 20px
-    }
+#minisitio form.bordeazul .txt {
+    margin: 0 20px 20px 20px
+}
 
-    #minisitio form.bordeazul .txt2 {
-        width: 810px;
-        margin: 0 0 0 20px
-    }
+#minisitio form.bordeazul .txt2 {
+    width: 810px;
+    margin: 0 0 0 20px
+}
 
-    #minisitio form.bordeazul .btnminisitio {
-        margin: 15px 20px
-    }
+#minisitio form.bordeazul .btnminisitio {
+    margin: 15px 20px
+}
 
 #minisitio iframe {
     border: 1px solid #23bce4;
@@ -1798,42 +1708,42 @@ footer {
     margin: auto
 }
 
-    #contacto .contacto p {
-        font-family: 'Roboto','sans-serif';
-        font-weight: 300;
-        font-size: 18px
-    }
+#contacto .contacto p {
+    font-family: 'Roboto', 'sans-serif';
+    font-weight: 300;
+    font-size: 18px
+}
 
-        #contacto .contacto p > img {
-            margin-right: 15px
-        }
+#contacto .contacto p>img {
+    margin-right: 15px
+}
 
-    #contacto .contacto h2 {
-        font-family: 'Roboto','sans-serif';
-        float: left;
-        padding-bottom: 10px;
-        border-bottom: #2688a3 1px solid;
-        color: #00b1e0;
-        font-size: 25px;
-        font-weight: normal
-    }
+#contacto .contacto h2 {
+    font-family: 'Roboto', 'sans-serif';
+    float: left;
+    padding-bottom: 10px;
+    border-bottom: #2688a3 1px solid;
+    color: #00b1e0;
+    font-size: 25px;
+    font-weight: normal
+}
 
-    #contacto .contacto .txt {
-        width: 100%;
-        margin: 10px 0 40px 0;
-        padding-left: 20px
-    }
+#contacto .contacto .txt {
+    width: 100%;
+    margin: 10px 0 40px 0;
+    padding-left: 20px
+}
 
-    #contacto .contacto .txtarea {
-        width: 100%;
-        margin: 10px 0 40px 0
-    }
+#contacto .contacto .txtarea {
+    width: 100%;
+    margin: 10px 0 40px 0
+}
 
-    #contacto .contacto .mensaje {
-        color: #666;
-        font-size: 16px;
-        float: left
-    }
+#contacto .contacto .mensaje {
+    color: #666;
+    font-size: 16px;
+    float: left
+}
 
 #anunciate .banners {
     padding-bottom: 30px;
@@ -1841,44 +1751,44 @@ footer {
     border-bottom: 1px solid #23bce4
 }
 
-#faqs section > div, #aviso section > div {
+#faqs section>div, #aviso section>div {
     text-align: justify
 }
 
-    #faqs section > div > h3, #aviso section > div > h3 {
-        margin-left: 30px
-    }
+#faqs section>div>h3, #aviso section>div>h3 {
+    margin-left: 30px
+}
 
-    #faqs section > div > p, #aviso section > div > p {
-        margin-left: 60px;
-        margin-right: 40px
-    }
+#faqs section>div>p, #aviso section>div>p {
+    margin-left: 60px;
+    margin-right: 40px
+}
 
 #gracias {
-    font-family: 'Roboto','sans-serif';
+    font-family: 'Roboto', 'sans-serif';
     position: relative
 }
 
-    #gracias .gracias {
-        height: 460px;
-        padding: 30px 0 0 50px;
-        background: url(../img/img-gracias.png) no-repeat right bottom
-    }
+#gracias .gracias {
+    height: 460px;
+    padding: 30px 0 0 50px;
+    background: url(../img/img-gracias.png) no-repeat right bottom
+}
 
-        #gracias .gracias h2 {
-            color: #00b1e0;
-            position: relative;
-            z-index: -1;
-            font-weight: normal;
-            padding: 0 0 20px 40px;
-            border-bottom: 2px solid #057695
-        }
+#gracias .gracias h2 {
+    color: #00b1e0;
+    position: relative;
+    z-index: -1;
+    font-weight: normal;
+    padding: 0 0 20px 40px;
+    border-bottom: 2px solid #057695
+}
 
-        #gracias .gracias p {
-            font-size: 20px;
-            padding-left: 40px;
-            font-weight: 300
-        }
+#gracias .gracias p {
+    font-size: 20px;
+    padding-left: 40px;
+    font-weight: 300
+}
 
 #busqueda .ficha {
     width: 49%;
@@ -1890,55 +1800,55 @@ footer {
     border-color: inherit
 }
 
-    #busqueda .ficha.noborde {
-        border: 0
-    }
+#busqueda .ficha.noborde {
+    border: 0
+}
 
 #busqueda .busqueda {
     height: auto;
     position: relative
 }
 
-    #busqueda .busqueda h2 {
-        width: 100%;
-        height: 50px;
-        line-height: 50px;
-        padding-left: 20px;
-        color: #23bce4;
-        border: solid 1px #23bce4;
-        font-weight: 500;
-        margin: 0;
-        margin-bottom: 2px;
-        background-color: #fff
-    }
+#busqueda .busqueda h2 {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    padding-left: 20px;
+    color: #23bce4;
+    border: solid 1px #23bce4;
+    font-weight: 500;
+    margin: 0;
+    margin-bottom: 2px;
+    background-color: #fff
+}
 
-    #busqueda .busqueda li {
-        height: auto
-    }
+#busqueda .busqueda li {
+    height: auto
+}
 
-        #busqueda .busqueda li .resultados {
-            width: 100%;
-            height: auto;
-            padding: 30px 20px
-        }
+#busqueda .busqueda li .resultados {
+    width: 100%;
+    height: auto;
+    padding: 30px 20px
+}
 
-    #busqueda .busqueda hr {
-        border-color: #23bce4
-    }
+#busqueda .busqueda hr {
+    border-color: #23bce4
+}
 
 #recuperar form.recuperar {
     width: 400px
 }
 
-    #recuperar form.recuperar .txt {
-        width: 100%;
-        margin: 10px 0
-    }
+#recuperar form.recuperar .txt {
+    width: 100%;
+    margin: 10px 0
+}
 
-    #recuperar form.recuperar .btnentrar {
-        width: 160px;
-        margin: 10px 0 0 80px
-    }
+#recuperar form.recuperar .btnentrar {
+    width: 160px;
+    margin: 10px 0 0 80px
+}
 
 #gratis h3 {
     margin-top: 50px
@@ -1950,10 +1860,10 @@ footer {
     font-weight: 300
 }
 
-    #gratis .puntos span, #gratis .puntos2 span {
-        font-size: 18px;
-        font-weight: 300
-    }
+#gratis .puntos span, #gratis .puntos2 span {
+    font-size: 18px;
+    font-weight: 300
+}
 
 #gratis .puntos2 {
     margin-left: 100px
@@ -1963,19 +1873,19 @@ footer {
     text-align: center
 }
 
-    #gratis .icogratis img {
-        margin: 50px 30px 15px 30px;
-        width: 120px
-    }
+#gratis .icogratis img {
+    margin: 50px 30px 15px 30px;
+    width: 120px
+}
 
-    #gratis .icogratis .btninstitucion {
-        width: 150px;
-        margin: 0 15px 0 15px
-    }
+#gratis .icogratis .btninstitucion {
+    width: 150px;
+    margin: 0 15px 0 15px
+}
 
 #perfil section h2 {
     color: #00b1e0;
-    font-family: 'Roboto','sans-serif'
+    font-family: 'Roboto', 'sans-serif'
 }
 
 #perfil section .perfil {
@@ -1985,22 +1895,22 @@ footer {
     margin: auto
 }
 
-    #perfil section .perfil b {
-        font-weight: 500;
-        padding-right: 7px
-    }
+#perfil section .perfil b {
+    font-weight: 500;
+    padding-right: 7px
+}
 
-    #perfil section .perfil .subt {
-        font-size: 16px
-    }
+#perfil section .perfil .subt {
+    font-size: 16px
+}
 
-    #perfil section .perfil p {
-        margin: 25px 0
-    }
+#perfil section .perfil p {
+    margin: 25px 0
+}
 
-    #perfil section .perfil .seguros, #perfil section .perfil .tarjetas {
-        margin: 0 20px 10px 0
-    }
+#perfil section .perfil .seguros, #perfil section .perfil .tarjetas {
+    margin: 0 20px 10px 0
+}
 
 #perfil section .btnregistro {
     margin: 30px 80px 0 0;
@@ -2009,7 +1919,7 @@ footer {
 
 #registro section h2 {
     color: #00b1e0;
-    font-family: 'Roboto','sans-serif'
+    font-family: 'Roboto', 'sans-serif'
 }
 
 #registro section .registro {
@@ -2020,93 +1930,93 @@ footer {
     margin: auto
 }
 
-    #registro section .registro .subt {
-        font-size: 18px;
-        margin: 0;
-        text-align: left;
-        font-weight: 300
-    }
+#registro section .registro .subt {
+    font-size: 18px;
+    margin: 0;
+    text-align: left;
+    font-weight: 300
+}
 
-    #registro section .registro .radios {
-        padding: 0 0 0 190px;
-        text-align: left
-    }
+#registro section .registro .radios {
+    padding: 0 0 0 190px;
+    text-align: left
+}
 
-        #registro section .registro .radios input {
-            margin: 0 10px 0 30px
-        }
+#registro section .registro .radios input {
+    margin: 0 10px 0 30px
+}
 
-    #registro section .registro p {
-        margin: 20px 0;
-        text-align: right
-    }
+#registro section .registro p {
+    margin: 20px 0;
+    text-align: right
+}
 
-    #registro section .registro .txt {
-        width: 640px;
-        margin-left: 15px
-    }
+#registro section .registro .txt {
+    width: 640px;
+    margin-left: 15px
+}
 
-    #registro section .registro .txt1 {
-        width: 130px
-    }
+#registro section .registro .txt1 {
+    width: 130px
+}
 
-    #registro section .registro .txt2 {
-        width: 239px
-    }
+#registro section .registro .txt2 {
+    width: 239px
+}
 
-    #registro section .registro .txt3 {
-        width: 402px;
-        margin-right: 28px
-    }
+#registro section .registro .txt3 {
+    width: 402px;
+    margin-right: 28px
+}
 
-    #registro section .registro table {
-        text-align: right;
-        margin-top: 15px;
-        clear: both
-    }
+#registro section .registro table {
+    text-align: right;
+    margin-top: 15px;
+    clear: both
+}
 
-        #registro section .registro table li {
-            padding: 0 35px 20px 0;
-            height: 110px;
-            float: left;
-            text-align: left
-        }
+#registro section .registro table li {
+    padding: 0 35px 20px 0;
+    height: 110px;
+    float: left;
+    text-align: left
+}
 
-            #registro section .registro table li input {
-                margin: 0 10px 20px 0
-            }
+#registro section .registro table li input {
+    margin: 0 10px 20px 0
+}
 
-        #registro section .registro table hr {
-            width: 100%;
-            margin: 25px 0;
-            border-top: 1px solid #808080;
-            float: left;
-            clear: both
-        }
+#registro section .registro table hr {
+    width: 100%;
+    margin: 25px 0;
+    border-top: 1px solid #808080;
+    float: left;
+    clear: both
+}
 
-        #registro section .registro table th {
-            text-align: left;
-            font-weight: normal
-        }
+#registro section .registro table th {
+    text-align: left;
+    font-weight: normal
+}
 
 #registro section .suscribir {
     width: 700px;
     margin: 30px auto
 }
 
-    #registro section .suscribir a {
-        color: #00b1e0;
-        text-decoration: underline
-    }
+#registro section .suscribir a {
+    color: #00b1e0;
+    text-decoration: underline
+}
 
-    #registro section .suscribir .radios {
-        margin: 0 10px 0 30px
-    }
+#registro section .suscribir .radios {
+    margin: 0 10px 0 30px
+}
 
-    #registro section .suscribir .btnregistro {
-        margin-right: 80px;
-        width: 140px
-    }
+#registro section .suscribir .btnregistro {
+    margin-right: 80px;
+    width: 140px
+}
 
 #registro section .datosminisitio .txtarea {
     width: 640px
@@ -2127,41 +2037,41 @@ footer {
     margin-bottom: 30px
 }
 
-    .ficha h4 {
-        font-size: 14px;
-        font-weight: 800;
-        color: #00b1e0;
-        margin: 10px 0
-    }
+.ficha h4 {
+    font-size: 14px;
+    font-weight: 800;
+    color: #00b1e0;
+    margin: 10px 0
+}
 
-    .ficha li {
-        width: 50%;
-        float: left
-    }
+.ficha li {
+    width: 50%;
+    float: left
+}
 
-        .ficha li h5 {
-            font-size: 13px;
-            font-weight: 500;
-            margin: 0
-        }
+.ficha li h5 {
+    font-size: 13px;
+    font-weight: 500;
+    margin: 0
+}
 
-            .ficha li h5 img {
-                margin-right: 5px
-            }
+.ficha li h5 img {
+    margin-right: 5px
+}
 
-        .ficha li p {
-            font-family: 'Roboto','sans-serif';
-            font-weight: 300;
-            margin: 0 0 20px 0
-        }
+.ficha li p {
+    font-family: 'Roboto', 'sans-serif';
+    font-weight: 300;
+    margin: 0 0 20px 0
+}
 
-            .ficha li p img {
-                margin: 3px 0 3px 8px
-            }
+.ficha li p img {
+    margin: 3px 0 3px 8px
+}
 
 #banner1 {
     width: 100%;
-    height: 170px;
+    height: 220px;
     margin: 20px 0;
     overflow: hidden
 }
@@ -2218,38 +2128,18 @@ footer {
 }
 
 .btnentrar {
-    /*width: 193px;
+    width: 193px;
     height: 35px;
     margin-bottom: 10px;
     color: #fff;
     text-shadow: 1px 1px 2px #000;
     border: 0;
     background: url(../img/bk-btnentrar.png) no-repeat center;
-    background-size: 100% 100%;*/
-    padding: 2px 75px;
-    font-size: 15px;
-    text-align: center;
-    cursor: pointer;
-    outline: none;
-    color: #fff;
-    background-color: #262626;
-    border: none;
-    border-radius: 6px;
-    box-shadow: 0 5px #999;
+    background-size: 100% 100%
 }
 
-    .btnentrar:hover {
-        background-color: #262626
-    }
-
-    .btnentrar:active {
-        background-color: #262626;
-        box-shadow: 0 5px #666;
-        transform: translateY(4px);
-    }
-
 .btnregistro {
-    /*width: 195px;
+    width: 195px;
     height: 42px;
     margin-bottom: 10px;
     padding-bottom: 8px;
@@ -2257,28 +2147,8 @@ footer {
     text-shadow: 1px 1px 2px #000;
     border: 0;
     background: url(../img/bk-btnregistro.png) no-repeat center;
-    background-size: 100% 100%;*/
-    padding: 15px 28px;
-    font-size: 10px;
-    text-align: center;
-    cursor: pointer;
-    outline: none;
-    color: #fff;
-    background-color: #262626;
-    border: none;
-    border-radius: 4px;
-    box-shadow: 0 5px #999
+    background-size: 100% 100%
 }
-
-    .btnregistro:hover {
-        background-color: #262626
-    }
-
-    .btnregistro:active {
-        background-color: #262626;
-        box-shadow: 0 5px #666;
-        transform: translateY(4px);
-    }
 
 .btnpreguntas {
     width: 254px;
@@ -2323,25 +2193,24 @@ footer {
     color: #fff;
     text-shadow: 1px 1px 2px #000;
     border: 0;
-    /*background: url(../img/bk-btninstitucion.png) no-repeat center;*/
-    background: #262626;
+    background: url(../img/bk-btninstitucion.png) no-repeat center;
     background-size: 100% 100%
 }
 
 .bordeazul {
-    border: 1px solid #262626
+    border: 1px solid #23bce4
 }
 
 .colorazul {
-    color: #262626
+    color: #00b1e0
 }
 
 .roboto {
-    font-family: 'Roboto','sans-serif'
+    font-family: 'Roboto', 'sans-serif'
 }
 
 .wrapper {
-    width: 1200px;
+    width: 960px;
     margin: auto;
     position: relative
 }
@@ -2364,21 +2233,21 @@ footer {
 }
 
 hr {
-    border-color: #262626
+    border-color: #23bce4
 }
 
 h3 {
     padding-left: 30px;
     font-size: 18px;
-    color: #262626;
+    color: #00b1e0;
     background: url(../img/vineta-subtitulo.png) no-repeat left 3px
 }
 
-    h3 span {
-        font-size: 16px;
-        font-weight: 300;
-        color: #505050
-    }
+h3 span {
+    font-size: 16px;
+    font-weight: 300;
+    color: #505050
+}
 
 h2 span {
     font-size: 16px;
@@ -2412,12 +2281,12 @@ a {
     top: -100px
 }
 
-    .ponplay #play {
-        background: url(http://www.ziarulatac.ro/static/images/play_icon.png) no-repeat center;
-        height: 290px;
-        width: 100%;
-        top: -190px;
-        position: relative;
-        background-size: 89px;
-        cursor: pointer
-    }
+.ponplay #play {
+    background: url(http://www.ziarulatac.ro/static/images/play_icon.png) no-repeat center;
+    height: 290px;
+    width: 100%;
+    top: -190px;
+    position: relative;
+    background-size: 89px;
+    cursor: pointer
+}
